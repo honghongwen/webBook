@@ -1,5 +1,5 @@
 module.exports = {
-  base: "/webBook",
+  base: "/webBook/",
   title: "小冯的Web手册",
   description: "小冯的Web手册",
   themeConfig: {
