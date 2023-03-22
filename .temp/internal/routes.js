@@ -4,16 +4,16 @@
 
 import { injectComponentOption, ensureAsyncComponentsLoaded } from '@app/util'
 import rootMixins from '@internal/root-mixins'
-import GlobalLayout from "F:\\work\\feng-blog\\node_modules\\@vuepress\\core\\lib\\client\\components\\GlobalLayout.vue"
+import GlobalLayout from "F:\\work\\webBook\\node_modules\\@vuepress\\core\\lib\\client\\components\\GlobalLayout.vue"
 
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-dd0201ca",
+    name: "v-37bad3a1",
     path: "/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-dd0201ca").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-37bad3a1").then(next)
     },
   },
   {
@@ -21,51 +21,67 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-c8974d9a",
-    path: "/front/css.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-c8974d9a").then(next)
-    },
-  },
-  {
-    name: "v-10b3c88b",
+    name: "v-47421376",
     path: "/backend/springboot.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-10b3c88b").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-47421376").then(next)
     },
   },
   {
-    name: "v-52f00e70",
-    path: "/config.html",
+    name: "v-f3113d26",
+    path: "/front/css.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-52f00e70").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-f3113d26").then(next)
     },
   },
   {
-    name: "v-d9d30246",
+    name: "v-0d62e08d",
+    path: "/front/vue.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-0d62e08d").then(next)
+    },
+  },
+  {
+    name: "v-4d8f3ed2",
     path: "/front/html.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-d9d30246").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-4d8f3ed2").then(next)
     },
   },
   {
-    name: "v-1650a9f3",
+    name: "v-9d4796fc",
+    path: "/config.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-9d4796fc").then(next)
+    },
+  },
+  {
+    name: "v-0113b22d",
     path: "/front/nvm.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1650a9f3").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-0113b22d").then(next)
     },
   },
   {
-    name: "v-80b3fba4",
+    name: "v-5b312dd2",
+    path: "/yunwei/linux.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-5b312dd2").then(next)
+    },
+  },
+  {
+    name: "v-3f593db4",
     path: "/guide/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-80b3fba4").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-3f593db4").then(next)
     },
   },
   {
@@ -73,27 +89,11 @@ export const routes = [
     redirect: "/guide/"
   },
   {
-    name: "v-229fd853",
-    path: "/front/vue.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-229fd853").then(next)
-    },
-  },
-  {
-    name: "v-17e0f45d",
-    path: "/yunwei/linux.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-17e0f45d").then(next)
-    },
-  },
-  {
-    name: "v-66288a91",
+    name: "v-20aeff4b",
     path: "/yunwei/nginx.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-66288a91").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-20aeff4b").then(next)
     },
   },
   {

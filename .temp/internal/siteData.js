@@ -4,7 +4,7 @@
 export const siteData = {
   "title": "小冯的Web手册",
   "description": "小冯的Web手册",
-  "base": "/webBook",
+  "base": "/webBook/",
   "headTags": [],
   "pages": [
     {
@@ -33,15 +33,23 @@ export const siteData = {
       },
       "regularPath": "/",
       "relativePath": "README.md",
-      "key": "v-dd0201ca",
+      "key": "v-37bad3a1",
       "path": "/"
+    },
+    {
+      "title": "SpringBoot",
+      "frontmatter": {},
+      "regularPath": "/backend/springboot.html",
+      "relativePath": "backend/springboot.md",
+      "key": "v-47421376",
+      "path": "/backend/springboot.html"
     },
     {
       "title": "CSS相关",
       "frontmatter": {},
       "regularPath": "/front/css.html",
       "relativePath": "front/css.md",
-      "key": "v-c8974d9a",
+      "key": "v-f3113d26",
       "path": "/front/css.html",
       "headers": [
         {
@@ -52,56 +60,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "SpringBoot",
-      "frontmatter": {},
-      "regularPath": "/backend/springboot.html",
-      "relativePath": "backend/springboot.md",
-      "key": "v-10b3c88b",
-      "path": "/backend/springboot.html"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-52f00e70",
-      "path": "/config.html"
-    },
-    {
-      "title": "HTML相关",
-      "frontmatter": {},
-      "regularPath": "/front/html.html",
-      "relativePath": "front/html.md",
-      "key": "v-d9d30246",
-      "path": "/front/html.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "不常用标签",
-          "slug": "不常用标签"
-        }
-      ]
-    },
-    {
-      "title": "Nvm管理Node版本",
-      "frontmatter": {},
-      "regularPath": "/front/nvm.html",
-      "relativePath": "front/nvm.md",
-      "key": "v-1650a9f3",
-      "path": "/front/nvm.html"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/guide/",
-      "relativePath": "guide/README.md",
-      "key": "v-80b3fba4",
-      "path": "/guide/"
-    },
-    {
       "title": "Vue知识",
       "frontmatter": {},
       "regularPath": "/front/vue.html",
       "relativePath": "front/vue.md",
-      "key": "v-229fd853",
+      "key": "v-0d62e08d",
       "path": "/front/vue.html",
       "headers": [
         {
@@ -117,11 +80,53 @@ export const siteData = {
       ]
     },
     {
+      "title": "HTML相关",
+      "frontmatter": {},
+      "regularPath": "/front/html.html",
+      "relativePath": "front/html.md",
+      "key": "v-4d8f3ed2",
+      "path": "/front/html.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "不常用标签",
+          "slug": "不常用标签"
+        }
+      ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-9d4796fc",
+      "path": "/config.html"
+    },
+    {
+      "title": "nvm管理Node版本",
+      "frontmatter": {},
+      "regularPath": "/front/nvm.html",
+      "relativePath": "front/nvm.md",
+      "key": "v-0113b22d",
+      "path": "/front/nvm.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "windows安装nvm",
+          "slug": "windows安装nvm"
+        },
+        {
+          "level": 2,
+          "title": "nvm命令",
+          "slug": "nvm命令"
+        }
+      ]
+    },
+    {
       "title": "Linux",
       "frontmatter": {},
       "regularPath": "/yunwei/linux.html",
       "relativePath": "yunwei/linux.md",
-      "key": "v-17e0f45d",
+      "key": "v-5b312dd2",
       "path": "/yunwei/linux.html",
       "headers": [
         {
@@ -147,11 +152,18 @@ export const siteData = {
       ]
     },
     {
+      "frontmatter": {},
+      "regularPath": "/guide/",
+      "relativePath": "guide/README.md",
+      "key": "v-3f593db4",
+      "path": "/guide/"
+    },
+    {
       "title": "Nginx",
       "frontmatter": {},
       "regularPath": "/yunwei/nginx.html",
       "relativePath": "yunwei/nginx.md",
-      "key": "v-66288a91",
+      "key": "v-20aeff4b",
       "path": "/yunwei/nginx.html"
     }
   ],
