@@ -33,23 +33,88 @@ export const siteData = {
       },
       "regularPath": "/",
       "relativePath": "README.md",
-      "key": "v-37bad3a1",
+      "key": "v-a94b7e40",
       "path": "/"
+    },
+    {
+      "title": "EasyExcel使用",
+      "frontmatter": {},
+      "regularPath": "/backend/easyexcel.html",
+      "relativePath": "backend/easyexcel.md",
+      "key": "v-46789dae",
+      "path": "/backend/easyexcel.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "导出复杂表头",
+          "slug": "导出复杂表头"
+        },
+        {
+          "level": 2,
+          "title": "最后使用合计行",
+          "slug": "最后使用合计行"
+        },
+        {
+          "level": 2,
+          "title": "注意",
+          "slug": "注意"
+        }
+      ]
+    },
+    {
+      "title": "LogBack日志配置",
+      "frontmatter": {},
+      "regularPath": "/backend/logback.html",
+      "relativePath": "backend/logback.md",
+      "key": "v-27daf3ee",
+      "path": "/backend/logback.html"
     },
     {
       "title": "SpringBoot",
       "frontmatter": {},
       "regularPath": "/backend/springboot.html",
       "relativePath": "backend/springboot.md",
-      "key": "v-47421376",
+      "key": "v-12ef48a6",
       "path": "/backend/springboot.html"
+    },
+    {
+      "title": "Treadpool项目中应用",
+      "frontmatter": {},
+      "regularPath": "/backend/threadpool.html",
+      "relativePath": "backend/threadpool.md",
+      "key": "v-00dfb950",
+      "path": "/backend/threadpool.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "配置",
+          "slug": "配置"
+        },
+        {
+          "level": 2,
+          "title": "等待sumbit结果",
+          "slug": "等待sumbit结果"
+        },
+        {
+          "level": 2,
+          "title": "CountDownLatch封装",
+          "slug": "countdownlatch封装"
+        }
+      ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-c7034c3a",
+      "path": "/config.html"
     },
     {
       "title": "CSS相关",
       "frontmatter": {},
       "regularPath": "/front/css.html",
       "relativePath": "front/css.md",
-      "key": "v-f3113d26",
+      "key": "v-61e63a0e",
       "path": "/front/css.html",
       "headers": [
         {
@@ -60,31 +125,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "Vue知识",
-      "frontmatter": {},
-      "regularPath": "/front/vue.html",
-      "relativePath": "front/vue.md",
-      "key": "v-0d62e08d",
-      "path": "/front/vue.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "搭建项目",
-          "slug": "搭建项目"
-        },
-        {
-          "level": 3,
-          "title": "版本使用",
-          "slug": "版本使用"
-        }
-      ]
-    },
-    {
       "title": "HTML相关",
       "frontmatter": {},
       "regularPath": "/front/html.html",
       "relativePath": "front/html.md",
-      "key": "v-4d8f3ed2",
+      "key": "v-d758d610",
       "path": "/front/html.html",
       "headers": [
         {
@@ -95,18 +140,11 @@ export const siteData = {
       ]
     },
     {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-9d4796fc",
-      "path": "/config.html"
-    },
-    {
       "title": "nvm管理Node版本",
       "frontmatter": {},
       "regularPath": "/front/nvm.html",
       "relativePath": "front/nvm.md",
-      "key": "v-0113b22d",
+      "key": "v-46faea64",
       "path": "/front/nvm.html",
       "headers": [
         {
@@ -122,11 +160,38 @@ export const siteData = {
       ]
     },
     {
+      "title": "Vue知识",
+      "frontmatter": {},
+      "regularPath": "/front/vue.html",
+      "relativePath": "front/vue.md",
+      "key": "v-2e5c8da4",
+      "path": "/front/vue.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "搭建项目",
+          "slug": "搭建项目"
+        },
+        {
+          "level": 3,
+          "title": "版本使用",
+          "slug": "版本使用"
+        }
+      ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/guide/",
+      "relativePath": "guide/README.md",
+      "key": "v-8f08771a",
+      "path": "/guide/"
+    },
+    {
       "title": "Linux",
       "frontmatter": {},
       "regularPath": "/yunwei/linux.html",
       "relativePath": "yunwei/linux.md",
-      "key": "v-5b312dd2",
+      "key": "v-6a1f84f8",
       "path": "/yunwei/linux.html",
       "headers": [
         {
@@ -136,13 +201,23 @@ export const siteData = {
         },
         {
           "level": 3,
-          "title": "工作相关查看日志",
-          "slug": "工作相关查看日志"
+          "title": "磁盘相关",
+          "slug": "磁盘相关"
+        },
+        {
+          "level": 3,
+          "title": "查看日志相关",
+          "slug": "查看日志相关"
+        },
+        {
+          "level": 3,
+          "title": "压缩解压",
+          "slug": "压缩解压"
         },
         {
           "level": 2,
-          "title": "Corntab定时任务",
-          "slug": "corntab定时任务"
+          "title": "Crontab定时任务",
+          "slug": "crontab定时任务"
         },
         {
           "level": 2,
@@ -152,19 +227,102 @@ export const siteData = {
       ]
     },
     {
-      "frontmatter": {},
-      "regularPath": "/guide/",
-      "relativePath": "guide/README.md",
-      "key": "v-3f593db4",
-      "path": "/guide/"
-    },
-    {
       "title": "Nginx",
       "frontmatter": {},
       "regularPath": "/yunwei/nginx.html",
       "relativePath": "yunwei/nginx.md",
-      "key": "v-20aeff4b",
-      "path": "/yunwei/nginx.html"
+      "key": "v-8f31c9a8",
+      "path": "/yunwei/nginx.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "常用conf",
+          "slug": "常用conf"
+        },
+        {
+          "level": 2,
+          "title": "命令",
+          "slug": "命令"
+        }
+      ]
+    },
+    {
+      "title": "RabbitMq",
+      "frontmatter": {},
+      "regularPath": "/yunwei/rabbitmq.html",
+      "relativePath": "yunwei/rabbitmq.md",
+      "key": "v-2daee668",
+      "path": "/yunwei/rabbitmq.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "镜像集群搭建",
+          "slug": "镜像集群搭建"
+        }
+      ]
+    },
+    {
+      "title": "Redis",
+      "frontmatter": {},
+      "regularPath": "/yunwei/redis.html",
+      "relativePath": "yunwei/redis.md",
+      "key": "v-47ff02aa",
+      "path": "/yunwei/redis.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "主从搭建",
+          "slug": "主从搭建"
+        },
+        {
+          "level": 2,
+          "title": "哨兵搭建",
+          "slug": "哨兵搭建"
+        },
+        {
+          "level": 2,
+          "title": "常用命令",
+          "slug": "常用命令"
+        }
+      ]
+    },
+    {
+      "title": "SuperVisor",
+      "frontmatter": {},
+      "regularPath": "/yunwei/supervisor.html",
+      "relativePath": "yunwei/supervisor.md",
+      "key": "v-d7104bb0",
+      "path": "/yunwei/supervisor.html"
+    },
+    {
+      "title": "FDFS使用",
+      "frontmatter": {},
+      "regularPath": "/backend/fdfs.html",
+      "relativePath": "backend/fdfs.md",
+      "key": "v-11fa958e",
+      "path": "/backend/fdfs.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "是什么",
+          "slug": "是什么"
+        },
+        {
+          "level": 2,
+          "title": "FDFS搭建",
+          "slug": "fdfs搭建"
+        },
+        {
+          "level": 2,
+          "title": "FDFS使用",
+          "slug": "fdfs使用-2"
+        }
+      ]
     }
   ],
   "themeConfig": {
@@ -186,7 +344,11 @@ export const siteData = {
         "collapsable": false,
         "sidebarDepth": 1,
         "children": [
-          "/backend/springboot"
+          "/backend/springboot",
+          "/backend/threadpool",
+          "/backend/logback",
+          "/backend/easyexcel",
+          "/backend/fdfs"
         ]
       },
       {
@@ -195,7 +357,10 @@ export const siteData = {
         "sidebarDepth": 1,
         "children": [
           "/yunwei/nginx",
-          "/yunwei/linux"
+          "/yunwei/linux",
+          "/yunwei/supervisor",
+          "/yunwei/rabbitmq",
+          "/yunwei/redis"
         ]
       }
     ]

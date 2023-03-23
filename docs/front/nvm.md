@@ -1,4 +1,4 @@
-# nvm管理Node版本
+# Nvm管理Node版本
 
 
 ## windows安装nvm

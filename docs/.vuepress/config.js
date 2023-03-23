@@ -21,7 +21,11 @@ module.exports = {
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 1,    // 可选的, 默认值是 1
         children: [ 
-           '/backend/springboot'
+           '/backend/springboot',
+           '/backend/threadpool',
+           '/backend/logback',
+           '/backend/easyexcel',
+           '/backend/fdfs'
          ],
       },
       {
@@ -30,7 +34,10 @@ module.exports = {
         sidebarDepth: 1,    // 可选的, 默认值是 1
         children: [ 
            '/yunwei/nginx',
-           '/yunwei/linux'
+           '/yunwei/linux',
+           '/yunwei/supervisor',
+           '/yunwei/rabbitmq',
+           '/yunwei/redis'
          ],
       }
     ]

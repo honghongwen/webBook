@@ -2,21 +2,128 @@
 
 ## 常用命令
 
+### 磁盘相关
+
 查看磁盘空间
 ```shell
-du -lh
+df -h
 ```
 
-查看当前文件夹下文件大小，可用来排查磁盘空间
+
+查看当前目录大小
 ```shell
-df -lg --max-depth = 1
+du -sh
 ```
-### 工作相关查看日志
 
-
-## Corntab定时任务
+查看指定目录大小
 ```shell
-corntab list
+du -sh 目录名称
+```
+
+查看当前文件夹下文件大小，可用来排查磁盘空间，非常实用
+```shell
+du -h --max-depth=1 *
+du -h --max-depth=0 *
+```
+
+查看指定文件夹大小，指定深度
+```shell
+du -h --max-depth=1 software/
+```
+
+### 查看日志相关
+
+最常用的实时查看日志
+```shell
+tail -100f xxx.log
+```
+
+搜索查看
+```shell
+grep -C 5 foo file  # 显示file文件里匹配foo字串那行以及上下5行
+grep -B 5 foo file  # 显示foo及前5行
+grep -A 5 foo file  # 显示foo及后5行
+```
+
+时间节点查看，一定要时间存在于日志中，否则会刷到底部
+```shell
+sed -n '/2019-10-28 13:15:20/,/2019-10-28 13:15:59/p' xxx.log
+```
+
+### 压缩解压
+
+将目录压缩到html.zip
+```shell
+zip -q -r html.zip /home/html
+zip -q -r html.zip ./dist/
+```
+
+将zip文件解压到html目录
+```shell
+unzip -o -d /usr/local/nginx/html /opt/dist.zip
+```
+
+## Crontab定时任务
+查看当前的定时任务
+```shell
+crontab -l
+```
+
+编辑
+```shell
+crontab -e
+```
+
+删除指定用户|删除指定任务
+```
+crontab -r <username>
+crontab -r | grep xxxx
+```
+
+例子,每天下午两点清空mysqld.log
+```shell
+0 14 * * * cat /dev/null > /var/log/mysqld.log
+```
+
+每天两点执行该shell，并将错误输出和正确输出都记录到log文件中
+```shell
+0 14 * * * /opt/crontab/cleanOnlieWebVersion.sh >> /opt/crontab/cleanOnlieWebVersion.sh.log 2>&1
+```
+
+清除历史记录shell，count目录下文件，然后倒序
+```shell
+#! /bin/sh
+
+cd /opt/jenkins/order/version
+fileNum=`ls -l |grep "^-"|wc -l`
+echo $fileNum
+if [ $fileNum -gt 6 ]
+then
+        echo "remove some oldest files so can reduce some space."
+        rm -rf `ls -t | tail -n +6`
+else
+        echo "The file numbers are less or equals 5, keep it."
+fi
+```
+
+统计数量
+```shell
+wc -l 
+```
+
+这个命令的意思是倒序后跳过第一行，total 16644, 同理，+3就是跳过前两行
+``` shell
+ls -lt | tail -n + 2
+```
+
+```
+total 16644
+-rw-r--r-- 1 root root 2844618 2022-10-24 16:10 html-20221024-1610.zip
+-rw-r--r-- 1 root root 2844623 2022-10-21 16:55 html-20221021-1655.zip
+-rw-r--r-- 1 root root 2844212 2022-10-18 10:06 html-20221018-1006.zip
+-rw-r--r-- 1 root root 2842800 2022-10-17 09:37 html-20221017-0937.zip
+-rw-r--r-- 1 root root 2842794 2022-10-17 09:13 html-20221017-0913.zip
+-rw-r--r-- 1 root root 2805808 2022-10-17 08:59 html-20221017-0859.zip
 ```
 
 ## 常用脚本
