@@ -8,6 +8,14 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "SpringBoot",
+      "frontmatter": {},
+      "regularPath": "/backend/springboot.html",
+      "relativePath": "backend/springboot.md",
+      "key": "v-12ef48a6",
+      "path": "/backend/springboot.html"
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -37,47 +45,6 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "EasyExcel使用",
-      "frontmatter": {},
-      "regularPath": "/backend/easyexcel.html",
-      "relativePath": "backend/easyexcel.md",
-      "key": "v-46789dae",
-      "path": "/backend/easyexcel.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "导出复杂表头",
-          "slug": "导出复杂表头"
-        },
-        {
-          "level": 2,
-          "title": "最后使用合计行",
-          "slug": "最后使用合计行"
-        },
-        {
-          "level": 2,
-          "title": "注意",
-          "slug": "注意"
-        }
-      ]
-    },
-    {
-      "title": "LogBack日志配置",
-      "frontmatter": {},
-      "regularPath": "/backend/logback.html",
-      "relativePath": "backend/logback.md",
-      "key": "v-27daf3ee",
-      "path": "/backend/logback.html"
-    },
-    {
-      "title": "SpringBoot",
-      "frontmatter": {},
-      "regularPath": "/backend/springboot.html",
-      "relativePath": "backend/springboot.md",
-      "key": "v-12ef48a6",
-      "path": "/backend/springboot.html"
-    },
-    {
       "title": "Treadpool项目中应用",
       "frontmatter": {},
       "regularPath": "/backend/threadpool.html",
@@ -103,13 +70,6 @@ export const siteData = {
       ]
     },
     {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-c7034c3a",
-      "path": "/config.html"
-    },
-    {
       "title": "CSS相关",
       "frontmatter": {},
       "regularPath": "/front/css.html",
@@ -123,6 +83,13 @@ export const siteData = {
           "slug": "奇怪的样式"
         }
       ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-c7034c3a",
+      "path": "/config.html"
     },
     {
       "title": "HTML相关",
@@ -140,7 +107,7 @@ export const siteData = {
       ]
     },
     {
-      "title": "nvm管理Node版本",
+      "title": "Nvm管理Node版本",
       "frontmatter": {},
       "regularPath": "/front/nvm.html",
       "relativePath": "front/nvm.md",
@@ -156,6 +123,11 @@ export const siteData = {
           "level": 2,
           "title": "nvm命令",
           "slug": "nvm命令"
+        },
+        {
+          "level": 2,
+          "title": "环境变量设置",
+          "slug": "环境变量设置"
         }
       ]
     },
@@ -180,11 +152,146 @@ export const siteData = {
       ]
     },
     {
+      "title": "GitBook",
+      "frontmatter": {},
+      "regularPath": "/yunwei/gitbook.html",
+      "relativePath": "yunwei/gitbook.md",
+      "key": "v-a40fef2c",
+      "path": "/yunwei/gitbook.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "说明",
+          "slug": "说明"
+        },
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "插件使用",
+          "slug": "插件使用"
+        }
+      ]
+    },
+    {
       "frontmatter": {},
       "regularPath": "/guide/",
       "relativePath": "guide/README.md",
       "key": "v-8f08771a",
       "path": "/guide/"
+    },
+    {
+      "title": "GitLab",
+      "frontmatter": {},
+      "regularPath": "/yunwei/gitlab.html",
+      "relativePath": "yunwei/gitlab.md",
+      "key": "v-6fbec270",
+      "path": "/yunwei/gitlab.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "配置",
+          "slug": "配置"
+        },
+        {
+          "level": 2,
+          "title": "相关操作",
+          "slug": "相关操作"
+        },
+        {
+          "level": 2,
+          "title": "常见问题",
+          "slug": "常见问题"
+        }
+      ]
+    },
+    {
+      "title": "Jenkins",
+      "frontmatter": {},
+      "regularPath": "/yunwei/jenkins.html",
+      "relativePath": "yunwei/jenkins.md",
+      "key": "v-6420fcf4",
+      "path": "/yunwei/jenkins.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "工作流程",
+          "slug": "工作流程"
+        },
+        {
+          "level": 2,
+          "title": "配置步骤",
+          "slug": "配置步骤"
+        },
+        {
+          "level": 3,
+          "title": "1. 步骤",
+          "slug": "_1-步骤"
+        },
+        {
+          "level": 3,
+          "title": "2. start.sh",
+          "slug": "_2-start-sh"
+        },
+        {
+          "level": 3,
+          "title": "3.jenkins全局配置",
+          "slug": "_3-jenkins全局配置"
+        },
+        {
+          "level": 2,
+          "title": "角色分配",
+          "slug": "角色分配"
+        },
+        {
+          "level": 2,
+          "title": "使用webhook自动部署",
+          "slug": "使用webhook自动部署"
+        },
+        {
+          "level": 2,
+          "title": "常用命令",
+          "slug": "常用命令"
+        }
+      ]
+    },
+    {
+      "title": "EasyExcel使用",
+      "frontmatter": {},
+      "regularPath": "/backend/easyexcel.html",
+      "relativePath": "backend/easyexcel.md",
+      "key": "v-46789dae",
+      "path": "/backend/easyexcel.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "导出复杂表头",
+          "slug": "导出复杂表头"
+        },
+        {
+          "level": 2,
+          "title": "最后使用合计行",
+          "slug": "最后使用合计行"
+        },
+        {
+          "level": 2,
+          "title": "注意",
+          "slug": "注意"
+        }
+      ]
     },
     {
       "title": "Linux",
@@ -227,6 +334,59 @@ export const siteData = {
       ]
     },
     {
+      "title": "LogBack日志配置",
+      "frontmatter": {},
+      "regularPath": "/backend/logback.html",
+      "relativePath": "backend/logback.md",
+      "key": "v-27daf3ee",
+      "path": "/backend/logback.html"
+    },
+    {
+      "title": "RabbitMq",
+      "frontmatter": {},
+      "regularPath": "/yunwei/rabbitmq.html",
+      "relativePath": "yunwei/rabbitmq.md",
+      "key": "v-2daee668",
+      "path": "/yunwei/rabbitmq.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "镜像集群搭建",
+          "slug": "镜像集群搭建"
+        }
+      ]
+    },
+    {
+      "title": "SuperVisor",
+      "frontmatter": {},
+      "regularPath": "/yunwei/supervisor.html",
+      "relativePath": "yunwei/supervisor.md",
+      "key": "v-d7104bb0",
+      "path": "/yunwei/supervisor.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "配置supervisord.conf",
+          "slug": "配置supervisord-conf"
+        },
+        {
+          "level": 2,
+          "title": "配置项目",
+          "slug": "配置项目"
+        },
+        {
+          "level": 2,
+          "title": "命令",
+          "slug": "命令"
+        }
+      ]
+    },
+    {
       "title": "Nginx",
       "frontmatter": {},
       "regularPath": "/yunwei/nginx.html",
@@ -248,21 +408,46 @@ export const siteData = {
           "level": 2,
           "title": "命令",
           "slug": "命令"
-        }
-      ]
-    },
-    {
-      "title": "RabbitMq",
-      "frontmatter": {},
-      "regularPath": "/yunwei/rabbitmq.html",
-      "relativePath": "yunwei/rabbitmq.md",
-      "key": "v-2daee668",
-      "path": "/yunwei/rabbitmq.html",
-      "headers": [
+        },
         {
           "level": 2,
-          "title": "镜像集群搭建",
-          "slug": "镜像集群搭建"
+          "title": "常见问题",
+          "slug": "常见问题"
+        },
+        {
+          "level": 2,
+          "title": "nginx+lvs 双机主备",
+          "slug": "nginx-lvs-双机主备"
+        },
+        {
+          "level": 3,
+          "title": "安装keepalived",
+          "slug": "安装keepalived"
+        },
+        {
+          "level": 3,
+          "title": "keepalived.conf master配置",
+          "slug": "keepalived-conf-master配置"
+        },
+        {
+          "level": 3,
+          "title": "keepalived.conf",
+          "slug": "keepalived-conf"
+        },
+        {
+          "level": 3,
+          "title": "命令",
+          "slug": "命令-2"
+        },
+        {
+          "level": 3,
+          "title": "注册到服务",
+          "slug": "注册到服务"
+        },
+        {
+          "level": 3,
+          "title": "自动重启",
+          "slug": "自动重启"
         }
       ]
     },
@@ -292,14 +477,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "SuperVisor",
-      "frontmatter": {},
-      "regularPath": "/yunwei/supervisor.html",
-      "relativePath": "yunwei/supervisor.md",
-      "key": "v-d7104bb0",
-      "path": "/yunwei/supervisor.html"
-    },
-    {
       "title": "FDFS使用",
       "frontmatter": {},
       "regularPath": "/backend/fdfs.html",
@@ -321,6 +498,31 @@ export const siteData = {
           "level": 2,
           "title": "FDFS使用",
           "slug": "fdfs使用-2"
+        }
+      ]
+    },
+    {
+      "title": "Confluence Wiki",
+      "frontmatter": {},
+      "regularPath": "/yunwei/wiki.html",
+      "relativePath": "yunwei/wiki.md",
+      "key": "v-da2006b0",
+      "path": "/yunwei/wiki.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "搭建",
+          "slug": "搭建"
+        },
+        {
+          "level": 2,
+          "title": "备份",
+          "slug": "备份"
+        },
+        {
+          "level": 2,
+          "title": "命令",
+          "slug": "命令"
         }
       ]
     }
@@ -354,12 +556,16 @@ export const siteData = {
       {
         "title": "运维手册",
         "collapsable": false,
-        "sidebarDepth": 1,
+        "sidebarDepth": 2,
         "children": [
           "/yunwei/nginx",
           "/yunwei/linux",
           "/yunwei/supervisor",
           "/yunwei/rabbitmq",
+          "/yunwei/gitbook",
+          "/yunwei/gitlab",
+          "/yunwei/jenkins",
+          "/yunwei/wiki",
           "/yunwei/redis"
         ]
       }

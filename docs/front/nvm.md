@@ -42,3 +42,23 @@ nvm use xx.xx.xx
 # 查看当前版本
 nvm current
 ```
+
+
+## 环境变量设置
+如果是windows机器，尽量配置以下全局位置和环境变量，不然经常找不到命令。
+其实可以注意到，每次nvm切换版本后, nvm/node的版本就被替换成了对应版本
+
+```shell
+npm config set prefix "D:\nvm\node_global"
+npm config set cache "D:\nvm\node_cache"
+```
+
+用户变量path里加上
+```shell
+;D:\nvm\node_global;
+```
+
+系统变量新增NODE_PATH,不要指向具体版本的,指向node文件夹的就ok
+```shell
+D:\nvm\node\node_modules
+```

@@ -31,12 +31,16 @@ module.exports = {
       {
         title: '运维手册',
         collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 1,    // 可选的, 默认值是 1
+        sidebarDepth: 2,    // 可选的, 默认值是 1
         children: [ 
            '/yunwei/nginx',
            '/yunwei/linux',
            '/yunwei/supervisor',
            '/yunwei/rabbitmq',
+           '/yunwei/gitbook',
+           '/yunwei/gitlab',
+           '/yunwei/jenkins',
+           '/yunwei/wiki',
            '/yunwei/redis'
          ],
       }
