@@ -29,7 +29,11 @@ module.exports = {
            '/backend/threadpool',
            '/backend/logback',
            '/backend/easyexcel',
-           '/backend/fdfs'
+           '/backend/fdfs',
+           '/backend/hadoop',
+           '/backend/arthas',
+           '/backend/intelij',
+           '/backend/problem'
          ],
       },
       {
@@ -39,13 +43,14 @@ module.exports = {
         children: [ 
            '/yunwei/nginx',
            '/yunwei/linux',
+           '/yunwei/vim',
            '/yunwei/supervisor',
-           '/yunwei/rabbitmq',
            '/yunwei/gitbook',
            '/yunwei/gitlab',
            '/yunwei/jenkins',
+           '/yunwei/redis',
+           '/yunwei/rabbitmq',
            '/yunwei/wiki',
-           '/yunwei/redis'
          ],
       }
     ]
