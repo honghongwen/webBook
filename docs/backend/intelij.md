@@ -15,7 +15,7 @@
   **/
 ```
 
-![intelij1](./intelij1.webp)
+![intelij1](./intelij1.png)
 
 ### 方法注释模版
 
@@ -45,4 +45,4 @@ groovyScript("if(\"${_1}\".length() == 2) {return '';} else {def result=''; def 
 groovyScript("def returnType = \"${_1}\"; def result = '* @return: ' + returnType; return result;", methodReturnType()); 
 ```
 
-![intelij2](./intelij2.webp)
+![intelij2](./intelij2.png)

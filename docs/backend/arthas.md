@@ -6,7 +6,7 @@ artahs这款工具，能让你直接在线上查看运行中的代码，以后�
 
 ## 热修复
 
-1. 反编译代码（ats)
+1. 反编译代码（ats）
 ```shell
 jad --source-only 
 com.example.demo.arthas.user.UserController > /tmp/UserController.java
@@ -17,7 +17,7 @@ com.example.demo.arthas.user.UserController > /tmp/UserController.java
 vim /tmp/UserController.java
 ```
 
-3. sc查找classloader（ats)
+3. sc查找classloader（ats）
 ```shell
 sc -d *UserController | grep classLoaderHash
 ```
@@ -41,5 +41,3 @@ retransform /tmp/com/example/demo/arthas/user/UserController.class
 
 ## 查看线上运行代码
 
-
-## ...
