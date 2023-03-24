@@ -57,10 +57,53 @@ sed -n '/2019-10-28 13:15:20/,/2019-10-28 13:15:59/p' xxx.log
 zip -q -r html.zip /home/html
 zip -q -r html.zip ./dist/
 ```
-
 将zip文件解压到html目录
 ```shell
 unzip -o -d /usr/local/nginx/html /opt/dist.zip
+```
+移动文件并以时间结尾
+```shell
+ mv html.zip ./html-$(date +%Y%m%d-%H%M).zip
+```
+
+tar压缩解压
+
+```shell
+ // tar压缩
+ tar -czvf test.tar.gz test.txt
+ // tar解压
+ tar -xzvf test.tar.gz
+ //tar列表
+ tar -tzvf test.tar.gz
+```
+
+### 软链接
+移除软连接
+如在/usr/bin目录下，要使node指向新安装的node
+
+```shell
+cd /usr/bin
+ll node
+// 移除软链
+rm -rf node
+
+// 新增软链
+ln -s /usr/local/bin/node node 
+```
+
+### 只保留最近几个任务
+```shell
+rm -rf `ls -t  |tail -n +11`
+```
+
+
+
+### 内核版本
+```shell
+cat /proc/version
+hostnamectl
+hostnamectl | grep -i kernel
+uname -srm
 ```
 
 ## Crontab定时任务
