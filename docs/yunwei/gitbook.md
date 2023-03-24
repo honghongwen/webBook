@@ -46,88 +46,78 @@ gitbook serve
 
 新建book.json
 
-一些常用插件如下，其中-代表去掉该插件。不过吐槽下，这个插件有时候慢到无法忍受
+gitbook自带五个插件，可以选择-去掉
+| 名称          | 说明                        |
+| ------------- | --------------------------- |
+| highlight     | 语法高亮插件，代码高亮功能  |
+| search        | 搜索插件，不支持中文搜索    |
+| sharing       | 分享插件，右上角分享功能    |
+| font-settings | 字体设置（最上方的"A"符号） |
+| livereload    | 热加载插件                  |
+
+
+
+一些常用插件如下，其中-代表去掉该插件。不过吐槽下，这个插件下载慢到无法忍受
+
+| 名称        | 说明           |
+| ----------- | -------------- |
+| insert-logo | 网站logo       |
+| favicon     | 网页title图标  |
+| search-pro  | 支持中文的搜索 |
+| splitter    | 侧边栏可调节   |
+| lightbox  | 图片弹窗显示     |
+| hide-element  | 隐藏不想看的内容     |
 
 ```json
 {
-    "author": "fengwen",
-    "description": "FENGWEN WIKI",
-    "extension": null,
-    "generator": "site",
-    "links": {
-        "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
-        },
-        "sidebar": {
-            "github": "http://honghongwen.github.com"
-        }
+  "author": "fengwen",
+  "description": "FENGWEN WIKI",
+  "extension": null,
+  "generator": "site",
+  "links": {
+    "sharing": {
+      "all": null,
+      "facebook": null,
+      "google": null,
+      "twitter": null,
+      "weibo": null
     },
-    "output": null,
-    "pdf": {
-        "fontSize": 12,
-        "footerTemplate": null,
-        "headerTemplate": null,
-        "margin": {
-            "bottom": 36,
-            "left": 62,
-            "right": 62,
-            "top": 36
-        },
-        "pageNumbers": false,
-        "paperSize": "a4"
-    },
-    "plugins": [
-        "-livereload",
-        "-sharing",
-        "expandable-chapters-small",
-        "insert-logo",
-        "code",
-        "search-plus",
-        "hide-element",
-        "splitter",
-        "mermaid-gb3",
-        "-copy-code-button",
-        "-tbfed-pagefooter",
-        "-valine"
-    ],
-    "title": "FENGWEN wiki",
-    "variables": {},
-    "pluginsConfig": {
-        "hide-element": {
-            "elements": [".gitbook-link"]
-        },
-        "insert-logo": {
-            "url": "/images/subscribe.png",
-            "style": "background: none; max-height: 120px; min-height: 120px"
-        },
-        "anchor-navigation-ex": {
-            "showLevel": false, 
-            "showGoTop": false 
-        },
-        "lightbox": {
-            "includeJQuery": false,
-            "sameUuid": true,
-            "options": {
-                "resizeDuration": 0,
-                "wrapAround": false
-            }
-        },
-        "tbfed-pagefooter": {
-            "copyright":"Copyright ©Sinfor",
-            "modify_label": "更新时间：",
-            "modify_format": "YYYY-MM-DD HH:mm:ss"
-        }
+    "sidebar": {
+      "GitHub": "https://github.com/honghongwen"
     }
+  },
+  "output": null,
+  "plugins": [
+    "-highlight",
+    "-search",
+    "-sharing",
+    "-livereload",
+    "-font-settings",
+    "-code",
+    "-lunr",
+    "-search-plus",
+    "-mermaid-gb3",
+    "-lightbox",
+    "-copy-code-button",
+    "-tbfed-pagefooter",
+    "-valine",
+    "insert-logo",
+    "hide-element",
+    "splitter"
+  ],
+  "title": "FENGWEN WIKI",
+  "variables": {},
+  "pluginsConfig": {
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "insert-logo": {
+      "url": "/images/subscribe.png",
+      "style": "background: none; max-height: 120px; min-height: 120px"
+    }
+  }
 }
 ```
 
-安装插件
-```shell
-gitbook install
-```
-
+[最终效果](https://honghongwen.github.io/gitBook)
 [可供参考文章](https://jiangminggithub.github.io/gitbook/)

@@ -8,14 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "SpringBoot",
-      "frontmatter": {},
-      "regularPath": "/backend/springboot.html",
-      "relativePath": "backend/springboot.md",
-      "key": "v-12ef48a6",
-      "path": "/backend/springboot.html"
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -45,6 +37,72 @@ export const siteData = {
       "path": "/"
     },
     {
+      "title": "EasyExcel使用",
+      "frontmatter": {},
+      "regularPath": "/backend/easyexcel.html",
+      "relativePath": "backend/easyexcel.md",
+      "key": "v-46789dae",
+      "path": "/backend/easyexcel.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "导出复杂表头",
+          "slug": "导出复杂表头"
+        },
+        {
+          "level": 2,
+          "title": "最后使用合计行",
+          "slug": "最后使用合计行"
+        },
+        {
+          "level": 2,
+          "title": "注意",
+          "slug": "注意"
+        }
+      ]
+    },
+    {
+      "title": "FDFS使用",
+      "frontmatter": {},
+      "regularPath": "/backend/fdfs.html",
+      "relativePath": "backend/fdfs.md",
+      "key": "v-11fa958e",
+      "path": "/backend/fdfs.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "是什么",
+          "slug": "是什么"
+        },
+        {
+          "level": 2,
+          "title": "FDFS搭建",
+          "slug": "fdfs搭建"
+        },
+        {
+          "level": 2,
+          "title": "FDFS使用",
+          "slug": "fdfs使用-2"
+        }
+      ]
+    },
+    {
+      "title": "LogBack日志配置",
+      "frontmatter": {},
+      "regularPath": "/backend/logback.html",
+      "relativePath": "backend/logback.md",
+      "key": "v-27daf3ee",
+      "path": "/backend/logback.html"
+    },
+    {
+      "title": "SpringBoot",
+      "frontmatter": {},
+      "regularPath": "/backend/springboot.html",
+      "relativePath": "backend/springboot.md",
+      "key": "v-12ef48a6",
+      "path": "/backend/springboot.html"
+    },
+    {
       "title": "Treadpool项目中应用",
       "frontmatter": {},
       "regularPath": "/backend/threadpool.html",
@@ -70,6 +128,13 @@ export const siteData = {
       ]
     },
     {
+      "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-c7034c3a",
+      "path": "/config.html"
+    },
+    {
       "title": "CSS相关",
       "frontmatter": {},
       "regularPath": "/front/css.html",
@@ -83,13 +148,6 @@ export const siteData = {
           "slug": "奇怪的样式"
         }
       ]
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-c7034c3a",
-      "path": "/config.html"
     },
     {
       "title": "HTML相关",
@@ -152,6 +210,13 @@ export const siteData = {
       ]
     },
     {
+      "frontmatter": {},
+      "regularPath": "/guide/",
+      "relativePath": "guide/README.md",
+      "key": "v-8f08771a",
+      "path": "/guide/"
+    },
+    {
       "title": "GitBook",
       "frontmatter": {},
       "regularPath": "/yunwei/gitbook.html",
@@ -175,13 +240,6 @@ export const siteData = {
           "slug": "插件使用"
         }
       ]
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/guide/",
-      "relativePath": "guide/README.md",
-      "key": "v-8f08771a",
-      "path": "/guide/"
     },
     {
       "title": "GitLab",
@@ -269,31 +327,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "EasyExcel使用",
-      "frontmatter": {},
-      "regularPath": "/backend/easyexcel.html",
-      "relativePath": "backend/easyexcel.md",
-      "key": "v-46789dae",
-      "path": "/backend/easyexcel.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "导出复杂表头",
-          "slug": "导出复杂表头"
-        },
-        {
-          "level": 2,
-          "title": "最后使用合计行",
-          "slug": "最后使用合计行"
-        },
-        {
-          "level": 2,
-          "title": "注意",
-          "slug": "注意"
-        }
-      ]
-    },
-    {
       "title": "Linux",
       "frontmatter": {},
       "regularPath": "/yunwei/linux.html",
@@ -330,59 +363,6 @@ export const siteData = {
           "level": 2,
           "title": "常用脚本",
           "slug": "常用脚本"
-        }
-      ]
-    },
-    {
-      "title": "LogBack日志配置",
-      "frontmatter": {},
-      "regularPath": "/backend/logback.html",
-      "relativePath": "backend/logback.md",
-      "key": "v-27daf3ee",
-      "path": "/backend/logback.html"
-    },
-    {
-      "title": "RabbitMq",
-      "frontmatter": {},
-      "regularPath": "/yunwei/rabbitmq.html",
-      "relativePath": "yunwei/rabbitmq.md",
-      "key": "v-2daee668",
-      "path": "/yunwei/rabbitmq.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "镜像集群搭建",
-          "slug": "镜像集群搭建"
-        }
-      ]
-    },
-    {
-      "title": "SuperVisor",
-      "frontmatter": {},
-      "regularPath": "/yunwei/supervisor.html",
-      "relativePath": "yunwei/supervisor.md",
-      "key": "v-d7104bb0",
-      "path": "/yunwei/supervisor.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "安装",
-          "slug": "安装"
-        },
-        {
-          "level": 2,
-          "title": "配置supervisord.conf",
-          "slug": "配置supervisord-conf"
-        },
-        {
-          "level": 2,
-          "title": "配置项目",
-          "slug": "配置项目"
-        },
-        {
-          "level": 2,
-          "title": "命令",
-          "slug": "命令"
         }
       ]
     },
@@ -452,6 +432,21 @@ export const siteData = {
       ]
     },
     {
+      "title": "RabbitMq",
+      "frontmatter": {},
+      "regularPath": "/yunwei/rabbitmq.html",
+      "relativePath": "yunwei/rabbitmq.md",
+      "key": "v-2daee668",
+      "path": "/yunwei/rabbitmq.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "镜像集群搭建",
+          "slug": "镜像集群搭建"
+        }
+      ]
+    },
+    {
       "title": "Redis",
       "frontmatter": {},
       "regularPath": "/yunwei/redis.html",
@@ -477,27 +472,32 @@ export const siteData = {
       ]
     },
     {
-      "title": "FDFS使用",
+      "title": "SuperVisor",
       "frontmatter": {},
-      "regularPath": "/backend/fdfs.html",
-      "relativePath": "backend/fdfs.md",
-      "key": "v-11fa958e",
-      "path": "/backend/fdfs.html",
+      "regularPath": "/yunwei/supervisor.html",
+      "relativePath": "yunwei/supervisor.md",
+      "key": "v-d7104bb0",
+      "path": "/yunwei/supervisor.html",
       "headers": [
         {
           "level": 2,
-          "title": "是什么",
-          "slug": "是什么"
+          "title": "安装",
+          "slug": "安装"
         },
         {
           "level": 2,
-          "title": "FDFS搭建",
-          "slug": "fdfs搭建"
+          "title": "配置supervisord.conf",
+          "slug": "配置supervisord-conf"
         },
         {
           "level": 2,
-          "title": "FDFS使用",
-          "slug": "fdfs使用-2"
+          "title": "配置项目",
+          "slug": "配置项目"
+        },
+        {
+          "level": 2,
+          "title": "命令",
+          "slug": "命令"
         }
       ]
     },
@@ -529,6 +529,16 @@ export const siteData = {
   ],
   "themeConfig": {
     "sidebarDepth": 3,
+    "nav": [
+      {
+        "text": "GitBook",
+        "link": "https://honghongwen.github.io/gitBook"
+      },
+      {
+        "text": "GitHub",
+        "link": "https://github.com/honghongwen"
+      }
+    ],
     "sidebar": [
       {
         "title": "前端",

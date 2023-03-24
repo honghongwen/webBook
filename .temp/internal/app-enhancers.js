@@ -1,6 +1,6 @@
 import m0 from "E:\\workspaces\\front\\front-23-03-22\\webBook\\.temp\\app-enhancers\\0.js"
 import m1 from "E:\\workspaces\\front\\front-23-03-22\\webBook\\.temp\\app-enhancers\\data-block.js"
-import m2 from "E:\\workspaces\\front\\front-23-03-22\\webBook\\.temp\\app-enhancers\\global-components-27.js"
+import m2 from "E:\\workspaces\\front\\front-23-03-22\\webBook\\.temp\\app-enhancers\\global-components-6.js"
 import m3 from "E:\\workspaces\\front\\front-23-03-22\\webBook\\.temp\\app-enhancers\\1.js"
 
 export default [

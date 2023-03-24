@@ -4,6 +4,10 @@ module.exports = {
   description: "小冯的Web手册",
   themeConfig: {
     sidebarDepth: 3,
+    nav: [
+      { text: 'GitBook', link: 'https://honghongwen.github.io/gitBook' },
+      { text: 'GitHub', link: 'https://github.com/honghongwen' },
+    ],
     sidebar: [
       {
         title: '前端',   // 必要的
