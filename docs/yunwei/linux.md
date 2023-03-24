@@ -96,8 +96,6 @@ ln -s /usr/local/bin/node node
 rm -rf `ls -t  |tail -n +11`
 ```
 
-
-
 ### 内核版本
 ```shell
 cat /proc/version
