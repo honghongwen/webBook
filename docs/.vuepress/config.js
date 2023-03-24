@@ -44,6 +44,7 @@ module.exports = {
           "/yunwei/gitlab",
           "/yunwei/jenkins",
           "/yunwei/redis",
+          "/yunwei/prometheus",
           "/yunwei/rabbitmq",
           "/yunwei/wiki",
         ],
