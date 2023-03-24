@@ -48,6 +48,14 @@ module.exports = {
           "/yunwei/wiki",
         ],
       },
+      {
+        title: "其他",
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2, // 可选的, 默认值是 1
+        children: [
+          "/other/author",
+        ],
+      },
     ],
   },
 };
