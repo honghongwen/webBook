@@ -7,7 +7,7 @@
 ## 导出复杂表头
 
 如图所示，像这种表头直接在注解里就能得到解决
-![合并表头](./excel.png)
+![合并表头](./image/excel.png)
 
 
 ```java
@@ -114,7 +114,7 @@ issues给了个大概的解决方案，是用两个table导出数据，后面的
 ```
 
 最终效果
-![sumExcel](./sumExcel.png)
+![sumExcel](./image/sumExcel.png)
 
 ## 注意
 3.0x的版本和最新的3.1/3.2的版本不同，3.0的版本使用table导出的时候无法使用try with resource语法，io流需自己关闭。

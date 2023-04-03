@@ -143,9 +143,9 @@ publish over ssh配置如下，jenkins服务器生成ssh key，将id_rsa私钥�
 针对同一个项目，采取test_和prod_开头新建任务，test_xxx代表这个项目的测试任务。prod_xxx代表这个项目的生产任务。同时新建视图prod、test将任务隔离开。
 然后在角色管理中新增不同角色，使用正则匹配不同的项目，给不同成员分配不同的角色即可。需注意的是jenkins分为全局角色和子角色，需自行了解配置。
 
-![jenkins](./jenkins.png)
-![jenkins_prod](./jenkins_prod.png)
-![jenkins_role](./jenkins_role.png)
+![jenkins](./image/jenkins.png)
+![jenkins_prod](./image/jenkins_prod.png)
+![jenkins_role](./image/jenkins_role.png)
 
 
 ## 使用webhook自动部署

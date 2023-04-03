@@ -15,7 +15,7 @@ nvm use xx.xx.xx不起作用
 > nvm安装完后，可能出现nvm不能正常使用node,原因是请先创建空的nvm文件夹，以及在nvm文件夹下创建node文件夹，然后指定root和path为这两个文件夹即可。
 
 文件夹结构如下
-![nvm](./nvm.png)
+![nvm](./image/nvm.png)
 
 
 ## nvm命令
