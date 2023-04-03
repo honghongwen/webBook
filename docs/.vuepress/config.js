@@ -5,49 +5,58 @@ module.exports = {
   themeConfig: {
     sidebarDepth: 3,
     nav: [
-      { text: 'GitBook', link: 'https://honghongwen.github.io/gitBook' },
-      { text: 'GitHub', link: 'https://github.com/honghongwen' },
+      { text: "基础知识", link: "https://honghongwen.github.io/gitBook" },
+      { text: "GitHub", link: "https://github.com/honghongwen" },
     ],
     sidebar: [
       {
-        title: '前端',   // 必要的
+        title: "前端", // 必要的
         collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 1,    // 可选的, 默认值是 1
+        sidebarDepth: 2, // 可选的, 默认值是 1
+        children: ["/front/html", "/front/css", "/front/vue", "/front/nvm"],
+      },
+      {
+        title: "后端",
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2, // 可选的, 默认值是 1
         children: [
-          '/front/html',
-          '/front/css',
-          '/front/vue',
-          '/front/nvm',
-        ]
+          "/backend/springboot",
+          "/backend/threadpool",
+          "/backend/logback",
+          "/backend/easyexcel",
+          "/backend/fdfs",
+          "/backend/hadoop",
+          "/backend/arthas",
+          "/backend/intelij",
+          "/backend/problem",
+        ],
       },
       {
-        title: '后端',
+        title: "运维手册",
         collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 1,    // 可选的, 默认值是 1
-        children: [ 
-           '/backend/springboot',
-           '/backend/threadpool',
-           '/backend/logback',
-           '/backend/easyexcel',
-           '/backend/fdfs'
-         ],
+        sidebarDepth: 2, // 可选的, 默认值是 1
+        children: [
+          "/yunwei/nginx",
+          "/yunwei/linux",
+          "/yunwei/vim",
+          "/yunwei/supervisor",
+          "/yunwei/gitbook",
+          "/yunwei/gitlab",
+          "/yunwei/jenkins",
+          "/yunwei/redis",
+          "/yunwei/prometheus",
+          "/yunwei/rabbitmq",
+          "/yunwei/wiki",
+        ],
       },
       {
-        title: '运维手册',
+        title: "其他",
         collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 2,    // 可选的, 默认值是 1
-        children: [ 
-           '/yunwei/nginx',
-           '/yunwei/linux',
-           '/yunwei/supervisor',
-           '/yunwei/rabbitmq',
-           '/yunwei/gitbook',
-           '/yunwei/gitlab',
-           '/yunwei/jenkins',
-           '/yunwei/wiki',
-           '/yunwei/redis'
-         ],
-      }
-    ]
-  }
+        sidebarDepth: 2, // 可选的, 默认值是 1
+        children: [
+          "/other/author",
+        ],
+      },
+    ],
+  },
 };

@@ -8,6 +8,151 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "Arthas",
+      "frontmatter": {},
+      "regularPath": "/backend/arthas.html",
+      "relativePath": "backend/arthas.md",
+      "key": "v-2f266195",
+      "path": "/backend/arthas.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "热修复",
+          "slug": "热修复"
+        },
+        {
+          "level": 2,
+          "title": "查看线上运行代码",
+          "slug": "查看线上运行代码"
+        }
+      ]
+    },
+    {
+      "title": "Hadoop",
+      "frontmatter": {},
+      "regularPath": "/backend/hadoop.html",
+      "relativePath": "backend/hadoop.md",
+      "key": "v-5cae44f9",
+      "path": "/backend/hadoop.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "配置",
+          "slug": "配置"
+        }
+      ]
+    },
+    {
+      "title": "FDFS使用",
+      "frontmatter": {},
+      "regularPath": "/backend/fdfs.html",
+      "relativePath": "backend/fdfs.md",
+      "key": "v-7a4279ad",
+      "path": "/backend/fdfs.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "是什么",
+          "slug": "是什么"
+        },
+        {
+          "level": 2,
+          "title": "FDFS搭建",
+          "slug": "fdfs搭建"
+        },
+        {
+          "level": 2,
+          "title": "FDFS使用",
+          "slug": "fdfs使用-2"
+        }
+      ]
+    },
+    {
+      "title": "EasyExcel使用",
+      "frontmatter": {},
+      "regularPath": "/backend/easyexcel.html",
+      "relativePath": "backend/easyexcel.md",
+      "key": "v-0e35b1e6",
+      "path": "/backend/easyexcel.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "导出复杂表头",
+          "slug": "导出复杂表头"
+        },
+        {
+          "level": 2,
+          "title": "最后使用合计行",
+          "slug": "最后使用合计行"
+        },
+        {
+          "level": 2,
+          "title": "注意",
+          "slug": "注意"
+        }
+      ]
+    },
+    {
+      "title": "SpringBoot",
+      "frontmatter": {},
+      "regularPath": "/backend/springboot.html",
+      "relativePath": "backend/springboot.md",
+      "key": "v-47421376",
+      "path": "/backend/springboot.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Apsect",
+          "slug": "apsect"
+        }
+      ]
+    },
+    {
+      "title": "LogBack日志配置",
+      "frontmatter": {},
+      "regularPath": "/backend/logback.html",
+      "relativePath": "backend/logback.md",
+      "key": "v-738904cd",
+      "path": "/backend/logback.html"
+    },
+    {
+      "title": "常遇到的问题",
+      "frontmatter": {},
+      "regularPath": "/backend/problem.html",
+      "relativePath": "backend/problem.md",
+      "key": "v-0c38dd66",
+      "path": "/backend/problem.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Mybatis将0识别成null",
+          "slug": "mybatis将0识别成null"
+        },
+        {
+          "level": 2,
+          "title": "URLEncode将空格转换为+号问题",
+          "slug": "urlencode将空格转换为-号问题"
+        },
+        {
+          "level": 2,
+          "title": "各种各样版本问题",
+          "slug": "各种各样版本问题"
+        }
+      ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-9d4796fc",
+      "path": "/config.html"
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -33,81 +178,15 @@ export const siteData = {
       },
       "regularPath": "/",
       "relativePath": "README.md",
-      "key": "v-a94b7e40",
+      "key": "v-37bad3a1",
       "path": "/"
-    },
-    {
-      "title": "EasyExcel使用",
-      "frontmatter": {},
-      "regularPath": "/backend/easyexcel.html",
-      "relativePath": "backend/easyexcel.md",
-      "key": "v-46789dae",
-      "path": "/backend/easyexcel.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "导出复杂表头",
-          "slug": "导出复杂表头"
-        },
-        {
-          "level": 2,
-          "title": "最后使用合计行",
-          "slug": "最后使用合计行"
-        },
-        {
-          "level": 2,
-          "title": "注意",
-          "slug": "注意"
-        }
-      ]
-    },
-    {
-      "title": "FDFS使用",
-      "frontmatter": {},
-      "regularPath": "/backend/fdfs.html",
-      "relativePath": "backend/fdfs.md",
-      "key": "v-11fa958e",
-      "path": "/backend/fdfs.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "是什么",
-          "slug": "是什么"
-        },
-        {
-          "level": 2,
-          "title": "FDFS搭建",
-          "slug": "fdfs搭建"
-        },
-        {
-          "level": 2,
-          "title": "FDFS使用",
-          "slug": "fdfs使用-2"
-        }
-      ]
-    },
-    {
-      "title": "LogBack日志配置",
-      "frontmatter": {},
-      "regularPath": "/backend/logback.html",
-      "relativePath": "backend/logback.md",
-      "key": "v-27daf3ee",
-      "path": "/backend/logback.html"
-    },
-    {
-      "title": "SpringBoot",
-      "frontmatter": {},
-      "regularPath": "/backend/springboot.html",
-      "relativePath": "backend/springboot.md",
-      "key": "v-12ef48a6",
-      "path": "/backend/springboot.html"
     },
     {
       "title": "Treadpool项目中应用",
       "frontmatter": {},
       "regularPath": "/backend/threadpool.html",
       "relativePath": "backend/threadpool.md",
-      "key": "v-00dfb950",
+      "key": "v-6e005e12",
       "path": "/backend/threadpool.html",
       "headers": [
         {
@@ -128,24 +207,27 @@ export const siteData = {
       ]
     },
     {
+      "title": "Intelij一些设置",
       "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-c7034c3a",
-      "path": "/config.html"
-    },
-    {
-      "title": "CSS相关",
-      "frontmatter": {},
-      "regularPath": "/front/css.html",
-      "relativePath": "front/css.md",
-      "key": "v-61e63a0e",
-      "path": "/front/css.html",
+      "regularPath": "/backend/intelij.html",
+      "relativePath": "backend/intelij.md",
+      "key": "v-47f2f04d",
+      "path": "/backend/intelij.html",
       "headers": [
         {
           "level": 2,
-          "title": "奇怪的样式",
-          "slug": "奇怪的样式"
+          "title": "注释模版",
+          "slug": "注释模版"
+        },
+        {
+          "level": 3,
+          "title": "类注释模版",
+          "slug": "类注释模版"
+        },
+        {
+          "level": 3,
+          "title": "方法注释模版",
+          "slug": "方法注释模版"
         }
       ]
     },
@@ -154,7 +236,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/front/html.html",
       "relativePath": "front/html.md",
-      "key": "v-d758d610",
+      "key": "v-4d8f3ed2",
       "path": "/front/html.html",
       "headers": [
         {
@@ -165,11 +247,34 @@ export const siteData = {
       ]
     },
     {
+      "title": "Author",
+      "frontmatter": {},
+      "regularPath": "/other/author.html",
+      "relativePath": "other/author.md",
+      "key": "v-72575465",
+      "path": "/other/author.html"
+    },
+    {
+      "title": "CSS相关",
+      "frontmatter": {},
+      "regularPath": "/front/css.html",
+      "relativePath": "front/css.md",
+      "key": "v-f3113d26",
+      "path": "/front/css.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "奇怪的样式",
+          "slug": "奇怪的样式"
+        }
+      ]
+    },
+    {
       "title": "Nvm管理Node版本",
       "frontmatter": {},
       "regularPath": "/front/nvm.html",
       "relativePath": "front/nvm.md",
-      "key": "v-46faea64",
+      "key": "v-0113b22d",
       "path": "/front/nvm.html",
       "headers": [
         {
@@ -190,38 +295,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "Vue知识",
-      "frontmatter": {},
-      "regularPath": "/front/vue.html",
-      "relativePath": "front/vue.md",
-      "key": "v-2e5c8da4",
-      "path": "/front/vue.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "搭建项目",
-          "slug": "搭建项目"
-        },
-        {
-          "level": 3,
-          "title": "版本使用",
-          "slug": "版本使用"
-        }
-      ]
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/guide/",
-      "relativePath": "guide/README.md",
-      "key": "v-8f08771a",
-      "path": "/guide/"
-    },
-    {
       "title": "GitBook",
       "frontmatter": {},
       "regularPath": "/yunwei/gitbook.html",
       "relativePath": "yunwei/gitbook.md",
-      "key": "v-a40fef2c",
+      "key": "v-2962c509",
       "path": "/yunwei/gitbook.html",
       "headers": [
         {
@@ -246,7 +324,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/yunwei/gitlab.html",
       "relativePath": "yunwei/gitlab.md",
-      "key": "v-6fbec270",
+      "key": "v-3dfff727",
       "path": "/yunwei/gitlab.html",
       "headers": [
         {
@@ -272,106 +350,83 @@ export const siteData = {
       ]
     },
     {
-      "title": "Jenkins",
+      "title": "Vue知识",
       "frontmatter": {},
-      "regularPath": "/yunwei/jenkins.html",
-      "relativePath": "yunwei/jenkins.md",
-      "key": "v-6420fcf4",
-      "path": "/yunwei/jenkins.html",
+      "regularPath": "/front/vue.html",
+      "relativePath": "front/vue.md",
+      "key": "v-0d62e08d",
+      "path": "/front/vue.html",
       "headers": [
         {
           "level": 2,
-          "title": "安装",
-          "slug": "安装"
+          "title": "组件版本",
+          "slug": "组件版本"
         },
         {
           "level": 2,
-          "title": "工作流程",
-          "slug": "工作流程"
-        },
-        {
-          "level": 2,
-          "title": "配置步骤",
-          "slug": "配置步骤"
+          "title": "项目搭建",
+          "slug": "项目搭建"
         },
         {
           "level": 3,
-          "title": "1. 步骤",
-          "slug": "_1-步骤"
+          "title": "1.创建项目",
+          "slug": "_1-创建项目"
         },
         {
           "level": 3,
-          "title": "2. start.sh",
-          "slug": "_2-start-sh"
+          "title": "2.集成vue-router",
+          "slug": "_2-集成vue-router"
         },
         {
           "level": 3,
-          "title": "3.jenkins全局配置",
-          "slug": "_3-jenkins全局配置"
+          "title": "2.集成element-ui",
+          "slug": "_2-集成element-ui"
         },
         {
-          "level": 2,
-          "title": "角色分配",
-          "slug": "角色分配"
+          "level": 3,
+          "title": "3.集成axios",
+          "slug": "_3-集成axios"
         },
         {
-          "level": 2,
-          "title": "使用webhook自动部署",
-          "slug": "使用webhook自动部署"
+          "level": 3,
+          "title": "4.集成vuex",
+          "slug": "_4-集成vuex"
         },
         {
-          "level": 2,
-          "title": "常用命令",
-          "slug": "常用命令"
+          "level": 3,
+          "title": "5.集成svg",
+          "slug": "_5-集成svg"
+        },
+        {
+          "level": 3,
+          "title": "6.集成scss",
+          "slug": "_6-集成scss"
+        },
+        {
+          "level": 3,
+          "title": "demo项目",
+          "slug": "demo项目"
+        },
+        {
+          "level": 3,
+          "title": "命令",
+          "slug": "命令"
         }
       ]
     },
     {
-      "title": "Linux",
       "frontmatter": {},
-      "regularPath": "/yunwei/linux.html",
-      "relativePath": "yunwei/linux.md",
-      "key": "v-6a1f84f8",
-      "path": "/yunwei/linux.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "常用命令",
-          "slug": "常用命令"
-        },
-        {
-          "level": 3,
-          "title": "磁盘相关",
-          "slug": "磁盘相关"
-        },
-        {
-          "level": 3,
-          "title": "查看日志相关",
-          "slug": "查看日志相关"
-        },
-        {
-          "level": 3,
-          "title": "压缩解压",
-          "slug": "压缩解压"
-        },
-        {
-          "level": 2,
-          "title": "Crontab定时任务",
-          "slug": "crontab定时任务"
-        },
-        {
-          "level": 2,
-          "title": "常用脚本",
-          "slug": "常用脚本"
-        }
-      ]
+      "regularPath": "/guide/",
+      "relativePath": "guide/README.md",
+      "key": "v-3f593db4",
+      "path": "/guide/"
     },
     {
       "title": "Nginx",
       "frontmatter": {},
       "regularPath": "/yunwei/nginx.html",
       "relativePath": "yunwei/nginx.md",
-      "key": "v-8f31c9a8",
+      "key": "v-20aeff4b",
       "path": "/yunwei/nginx.html",
       "headers": [
         {
@@ -436,7 +491,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/yunwei/rabbitmq.html",
       "relativePath": "yunwei/rabbitmq.md",
-      "key": "v-2daee668",
+      "key": "v-795cf747",
       "path": "/yunwei/rabbitmq.html",
       "headers": [
         {
@@ -447,13 +502,103 @@ export const siteData = {
       ]
     },
     {
+      "title": "Prometheus",
+      "frontmatter": {},
+      "regularPath": "/yunwei/prometheus.html",
+      "relativePath": "yunwei/prometheus.md",
+      "key": "v-0e55c647",
+      "path": "/yunwei/prometheus.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "配置",
+          "slug": "配置"
+        },
+        {
+          "level": 2,
+          "title": "集成 Grafana",
+          "slug": "集成-grafana"
+        },
+        {
+          "level": 2,
+          "title": "Springboot 整合",
+          "slug": "springboot-整合"
+        }
+      ]
+    },
+    {
+      "title": "Jenkins",
+      "frontmatter": {},
+      "regularPath": "/yunwei/jenkins.html",
+      "relativePath": "yunwei/jenkins.md",
+      "key": "v-40e88cda",
+      "path": "/yunwei/jenkins.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
+        {
+          "level": 2,
+          "title": "工作流程",
+          "slug": "工作流程"
+        },
+        {
+          "level": 2,
+          "title": "配置步骤",
+          "slug": "配置步骤"
+        },
+        {
+          "level": 3,
+          "title": "1. 步骤",
+          "slug": "_1-步骤"
+        },
+        {
+          "level": 3,
+          "title": "2. start.sh",
+          "slug": "_2-start-sh"
+        },
+        {
+          "level": 3,
+          "title": "3.jenkins全局配置",
+          "slug": "_3-jenkins全局配置"
+        },
+        {
+          "level": 2,
+          "title": "角色分配",
+          "slug": "角色分配"
+        },
+        {
+          "level": 2,
+          "title": "使用webhook自动部署",
+          "slug": "使用webhook自动部署"
+        },
+        {
+          "level": 2,
+          "title": "常用命令",
+          "slug": "常用命令"
+        }
+      ]
+    },
+    {
       "title": "Redis",
       "frontmatter": {},
       "regularPath": "/yunwei/redis.html",
       "relativePath": "yunwei/redis.md",
-      "key": "v-47ff02aa",
+      "key": "v-9f72326e",
       "path": "/yunwei/redis.html",
       "headers": [
+        {
+          "level": 2,
+          "title": "安装",
+          "slug": "安装"
+        },
         {
           "level": 2,
           "title": "主从搭建",
@@ -466,8 +611,118 @@ export const siteData = {
         },
         {
           "level": 2,
+          "title": "集群搭建",
+          "slug": "集群搭建"
+        },
+        {
+          "level": 2,
           "title": "常用命令",
           "slug": "常用命令"
+        },
+        {
+          "level": 2,
+          "title": "数据结构",
+          "slug": "数据结构"
+        },
+        {
+          "level": 3,
+          "title": "基本的五个",
+          "slug": "基本的五个"
+        },
+        {
+          "level": 3,
+          "title": "复杂的",
+          "slug": "复杂的"
+        },
+        {
+          "level": 2,
+          "title": "持久化",
+          "slug": "持久化"
+        },
+        {
+          "level": 2,
+          "title": "其他",
+          "slug": "其他"
+        }
+      ]
+    },
+    {
+      "title": "Vim",
+      "frontmatter": {},
+      "regularPath": "/yunwei/vim.html",
+      "relativePath": "yunwei/vim.md",
+      "key": "v-2a9f0bcb",
+      "path": "/yunwei/vim.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "配置~/.vimrc",
+          "slug": "配置-vimrc"
+        },
+        {
+          "level": 2,
+          "title": "底线命令",
+          "slug": "底线命令"
+        },
+        {
+          "level": 2,
+          "title": "命令模式",
+          "slug": "命令模式"
+        }
+      ]
+    },
+    {
+      "title": "Linux",
+      "frontmatter": {},
+      "regularPath": "/yunwei/linux.html",
+      "relativePath": "yunwei/linux.md",
+      "key": "v-5b312dd2",
+      "path": "/yunwei/linux.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "常用命令",
+          "slug": "常用命令"
+        },
+        {
+          "level": 3,
+          "title": "磁盘相关",
+          "slug": "磁盘相关"
+        },
+        {
+          "level": 3,
+          "title": "查看日志相关",
+          "slug": "查看日志相关"
+        },
+        {
+          "level": 3,
+          "title": "压缩解压",
+          "slug": "压缩解压"
+        },
+        {
+          "level": 3,
+          "title": "软链接",
+          "slug": "软链接"
+        },
+        {
+          "level": 3,
+          "title": "只保留最近几个任务",
+          "slug": "只保留最近几个任务"
+        },
+        {
+          "level": 3,
+          "title": "内核版本",
+          "slug": "内核版本"
+        },
+        {
+          "level": 2,
+          "title": "Crontab定时任务",
+          "slug": "crontab定时任务"
+        },
+        {
+          "level": 2,
+          "title": "常用脚本",
+          "slug": "常用脚本"
         }
       ]
     },
@@ -476,7 +731,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/yunwei/supervisor.html",
       "relativePath": "yunwei/supervisor.md",
-      "key": "v-d7104bb0",
+      "key": "v-46e46387",
       "path": "/yunwei/supervisor.html",
       "headers": [
         {
@@ -506,7 +761,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/yunwei/wiki.html",
       "relativePath": "yunwei/wiki.md",
-      "key": "v-da2006b0",
+      "key": "v-31d05c87",
       "path": "/yunwei/wiki.html",
       "headers": [
         {
@@ -531,7 +786,7 @@ export const siteData = {
     "sidebarDepth": 3,
     "nav": [
       {
-        "text": "GitBook",
+        "text": "基础知识",
         "link": "https://honghongwen.github.io/gitBook"
       },
       {
@@ -543,7 +798,7 @@ export const siteData = {
       {
         "title": "前端",
         "collapsable": false,
-        "sidebarDepth": 1,
+        "sidebarDepth": 2,
         "children": [
           "/front/html",
           "/front/css",
@@ -554,13 +809,17 @@ export const siteData = {
       {
         "title": "后端",
         "collapsable": false,
-        "sidebarDepth": 1,
+        "sidebarDepth": 2,
         "children": [
           "/backend/springboot",
           "/backend/threadpool",
           "/backend/logback",
           "/backend/easyexcel",
-          "/backend/fdfs"
+          "/backend/fdfs",
+          "/backend/hadoop",
+          "/backend/arthas",
+          "/backend/intelij",
+          "/backend/problem"
         ]
       },
       {
@@ -570,13 +829,22 @@ export const siteData = {
         "children": [
           "/yunwei/nginx",
           "/yunwei/linux",
+          "/yunwei/vim",
           "/yunwei/supervisor",
-          "/yunwei/rabbitmq",
           "/yunwei/gitbook",
           "/yunwei/gitlab",
           "/yunwei/jenkins",
-          "/yunwei/wiki",
-          "/yunwei/redis"
+          "/yunwei/redis",
+          "/yunwei/rabbitmq",
+          "/yunwei/wiki"
+        ]
+      },
+      {
+        "title": "其他",
+        "collapsable": false,
+        "sidebarDepth": 2,
+        "children": [
+          "/other/author"
         ]
       }
     ]
