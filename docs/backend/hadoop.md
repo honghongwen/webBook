@@ -71,4 +71,4 @@ tar zxvf hadoop-3.3.5.tar.gz
  ```
 
  在50070端口查看hadoop主页
-![hadoopo](./hadoop.png)
+![hadoopo](./image/hadoop.png)
