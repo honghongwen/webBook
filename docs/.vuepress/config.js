@@ -29,6 +29,7 @@ module.exports = {
           "/backend/arthas",
           "/backend/intelij",
           "/backend/problem",
+          "/backend/elasticsearch",
         ],
       },
       {
