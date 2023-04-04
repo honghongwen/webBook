@@ -82,7 +82,8 @@ sysctl -p
 
 ## Kibana安装
 
-还有一种GUI是使用elasticsearch-head，这种基于你的本地node环境run启动。
+还有一种GUI是使用elasticsearch-head,这种chrome插件已经不支持了，同样需要node环境启动，我这里记录下。
+
 [kibana官网](https://www.elastic.co/downloads/kibana)
 
 
