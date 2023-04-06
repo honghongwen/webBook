@@ -50,6 +50,33 @@ grep -A 5 foo file  # 显示foo及后5行
 sed -n '/2019-10-28 13:15:20/,/2019-10-28 13:15:59/p' xxx.log
 ```
 
+more命令
+```shell
+more xxx.log
+
+# 空格键 向下翻页
+# 回车 向下翻行
+# /字符串 在当前页位置向下查找内容
+# :f 立即显示文件名已经目前位置行号
+# b或ctrl + b 往回翻页
+```
+
+less命令,比more更好用,更推荐这个
+```shell
+less xxx.log
+
+# pagedown 下翻页
+# pageup 上翻页
+# /字符串 和more一样
+# ?字符串 向上查找字符串
+# n重复查找
+# N反向重复查找
+# g跳转到第一行
+# G跳转到最后一行
+# q退出
+```
+
+
 ### 压缩解压
 
 将目录压缩到html.zip
@@ -71,7 +98,7 @@ tar压缩解压
 ```shell
  // tar压缩
  tar -czvf test.tar.gz test.txt
- // tar解压
+ // tar解压 x代表解压、v代表显示过程信息、z代表gzip的压缩包、f代表后面紧跟着的是文件不能写成-xfzv、c代表压缩
  tar -xzvf test.tar.gz
  //tar列表
  tar -tzvf test.tar.gz

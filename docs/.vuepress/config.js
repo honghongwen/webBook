@@ -26,10 +26,10 @@ module.exports = {
           "/backend/easyexcel",
           "/backend/fdfs",
           "/backend/hadoop",
+          "/backend/elasticsearch",
           "/backend/arthas",
           "/backend/intelij",
           "/backend/problem",
-          "/backend/elasticsearch",
         ],
       },
       {
