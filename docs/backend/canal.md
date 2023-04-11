@@ -51,11 +51,9 @@ RDBMS物化视图
 
 
 
-###
+## 选用canal做数据同步
 
-选用canal做数据同步
-
-#### 1.开启mysql的binlog(自建，阿里云上的默认开启)
+### 1.开启mysql的binlog(自建，阿里云上的默认开启)
 
 ```shell
 vim /etc/my.cnf
@@ -82,7 +80,7 @@ mysql> flush privileges;
 ```
 
 
-#### 2.下载canal相关组件，我用的1.1.3
+### 2.下载canal相关组件，我用的1.1.3
 
 1.下载deployer组件，修改conf下面的canal.properties
 
