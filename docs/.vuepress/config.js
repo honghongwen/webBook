@@ -27,6 +27,7 @@ module.exports = {
           "/backend/fdfs",
           "/backend/hadoop",
           "/backend/elasticsearch",
+          "/backend/canal",
           "/backend/arthas",
           "/backend/intelij",
           "/backend/problem",
