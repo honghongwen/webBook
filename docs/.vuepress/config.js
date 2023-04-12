@@ -28,6 +28,7 @@ module.exports = {
           "/backend/hadoop",
           "/backend/elasticsearch",
           "/backend/canal",
+          "/backend/oraclecdc",
           "/backend/arthas",
           "/backend/intelij",
           "/backend/problem",
