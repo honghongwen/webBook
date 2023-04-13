@@ -14,3 +14,4 @@
 | Datax、logstash-input-jdbc       | 不基于redo log，只能定时sql   |         |
 | tapdata、cloud canal         | 企业版收费、社区版链路不足  |  官网地址：https://tapdata.net/    https://www.clougence.com/       |
 | 云厂商DTS之类 | 接云、商用  |         |
+| Flink-CDC |   |   最终选择，基于Debezium和Logminer处理，2.1.0后支持Oracle数据源      |

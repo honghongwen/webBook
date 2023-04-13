@@ -29,6 +29,7 @@ module.exports = {
           "/backend/elasticsearch",
           "/backend/canal",
           "/backend/oraclecdc",
+          "/backend/flinkcdc",
           "/backend/arthas",
           "/backend/intelij",
           "/backend/problem",
