@@ -44,4 +44,4 @@ google了下有人说是根据公钥爆破的
 
 后续继续观察，/var/tmp下没有继续在下载文件了。
 
-后续继续做观察，实在不行下个[Clamav](https://github.com/Cisco-Talos/clamav)扫下病毒吧。
+后续继续做观察，实在不行下个[Clamav](https://github.com/Cisco-Talos/clamav)扫下病毒或者用下[denyhosts](https://github.com/denyhosts/denyhosts)试试。
