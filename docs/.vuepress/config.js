@@ -52,6 +52,7 @@ module.exports = {
           "/yunwei/prometheus",
           "/yunwei/rabbitmq",
           "/yunwei/wiki",
+          "/yunwei/wakuang",
         ],
       },
       {
