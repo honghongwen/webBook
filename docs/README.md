@@ -1,5 +1,5 @@
 ---
-home: true
+home: false
 heroImage: /work.png
 heroText: 小冯的Web笔记
 tagline: 前后端、运维技术手册
