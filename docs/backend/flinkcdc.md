@@ -5,7 +5,8 @@
 | 依赖  | 版本  |
 |---------|------------|
 |  Oracle | Oracle11g  |
-|  Flink-CDC | 2.1.0 |
+|  Flink-CDC | 2.2.1 |
+|  Flink |  1.13.0|
 |   JDK |   8|
 
 ## Docker安装Oracle11g
@@ -127,12 +128,6 @@ maven依赖
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
-    </parent>
-
     <groupId>com.sinfor</groupId>
     <artifactId>sinfor-flink</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -154,7 +149,12 @@ maven依赖
         <dependency>
             <groupId>com.ververica</groupId>
             <artifactId>flink-connector-oracle-cdc</artifactId>
-            <version>2.1.0</version>
+            <version>2.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka_2.11</artifactId>
+            <version>1.13.6</version>
         </dependency>
 
         <dependency>
@@ -245,6 +245,7 @@ maven依赖
 </project>
 ```
 
+用单表的方式，但是这种方式有局限性，需要每张表都作为一个任务占用slot资源。且tableApi我好像没发现有sink功能。
 ```java
 package com.sinfor.flink;
 
@@ -261,22 +262,21 @@ public class OracleToKafka {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
         env.setParallelism(1);
         env.disableOperatorChaining();
 
-        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
-
         tableEnv.executeSql("CREATE TABLE sinfor_user (\n" +
-                "     ID INT NOT NULL,\n" +                   // 注意字段名要大写
-                "     NAME STRING,\n" +
-                "     AGE STRING,\n" +
-                "     STATUS INT,\n" +
-                "     CREATE_TIME BIGINT,\n" +
-                "     UPDATE_TIME BIGINT,\n" +
+                "     `ID` INT NOT NULL,\n" +                   // 注意字段名要大写
+                "     `NAME` STRING,\n" +
+                "     `AGE` STRING,\n" +
+                "     `STATUS` INT,\n" +
+                "     `CREATE_TIME` BIGINT,\n" +
+                "     `UPDATE_TIME` BIGINT,\n" +
                 "     PRIMARY KEY(`ID`) NOT ENFORCED\n" +   // 要加上NOT ENFORCED
                 "     ) WITH (\n" +
                 "     'connector' = 'oracle-cdc',\n" +
-                "     'hostname' = 'xxx.xx.xx.xxx',\n" +
+                "     'hostname' = 'xx.xx.xx.xx',\n" +
                 "     'port' = '1521',\n" +
                 "     'username' = 'sinfor',\n" +
                 "     'password' = 'sinfor',\n" +
@@ -287,13 +287,76 @@ public class OracleToKafka {
                 "     'debezium.log.mining.strategy'='online_catalog',\n" +
                 "     'debezium.database.tablename.case.insensitive'='false',\n"+
                 "     'scan.startup.mode' = 'initial')");
-
         TableResult tableResult = tableEnv.executeSql("select * from sinfor_user");
         tableResult.print();
+
+
         env.execute();
     }
 }
+
 ```
+
+用DataStream方式,这种方式坑有点多，实属不易。但是好在测试是成功的，也能sink到kafka
+```java
+package com.sinfor.flink;
+
+import com.ververica.cdc.connectors.oracle.OracleSource;
+import com.ververica.cdc.connectors.oracle.table.StartupOptions;
+import com.ververica.cdc.debezium.JsonDebeziumDeserializationSchema;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.flink.api.common.serialization.SimpleStringSchema;
+import org.apache.flink.streaming.api.datastream.DataStreamSource;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.source.SourceFunction;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
+
+import java.util.Properties;
+
+/**
+ * @author fengwen
+ * @date 2023/4/17
+ * @description TODO
+ **/
+public class Oracle2Kafka {
+
+    public static void main(String[] args) throws Exception {
+
+        Properties properties = new Properties();
+        properties.setProperty("debezium.database.tablename.case.insensitive", "false");
+        properties.setProperty("debezium.log.mining.strategy", "online_catalog");
+        properties.setProperty("debezium.log.mining.continuous.mine", "true");
+        SourceFunction<String> sourceFunction = OracleSource.<String>builder()
+                .hostname("xxx.xx.xx.xxx")
+                .port(1521)
+                .database("helowin") // monitor XE database
+                .schemaList("SINFOR") // monitor inventory schema
+                .tableList("SINFOR.SINFOR_USER") // monitor products table
+                .username("sinfor")
+                .password("sinfor")
+                .startupOptions(StartupOptions.initial())
+                .debeziumProperties(properties)
+                .deserializer(new JsonDebeziumDeserializationSchema()) // converts SourceRecord to JSON String
+                .build();
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        DataStreamSource<String> sourceStream = env.addSource(sourceFunction).setParallelism(1);// use parallelism 1 for sink to keep message ordering
+        SingleOutputStreamOperator<String> streamOperator = sourceStream
+                .filter(StringUtils::isNotEmpty);
+        streamOperator.setParallelism(1).print();
+        //sink到kafka
+        Properties kafkaProp = new Properties();
+        kafkaProp.setProperty("bootstrap.servers", "xxx.xx.xx.xxx:9191");
+        FlinkKafkaProducer<String> producer = new FlinkKafkaProducer<>("sinfor",
+                new SimpleStringSchema(),
+                kafkaProp);
+        streamOperator.addSink(producer);
+        env.execute();
+    }
+}
+
+```
+
 测试结果如下，全量及后续的改和删都能正常
 ![cdc](./image/cdc2.png)
 

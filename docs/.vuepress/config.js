@@ -30,6 +30,7 @@ module.exports = {
           "/backend/canal",
           "/backend/oraclecdc",
           "/backend/flinkcdc",
+          "/backend/kafka",
           "/backend/arthas",
           "/backend/intelij",
           "/backend/problem",
