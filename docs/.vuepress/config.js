@@ -1,7 +1,7 @@
 module.exports = {
-  base: "/front/vue",
-  title: "小冯的Web手册",
-  description: "小冯的Web手册",
+  base: "/",
+  title: "山雨光云的技术手册",
+  description: "山雨光云的技术手册",
   
   themeConfig: {
     sidebarDepth: 3,

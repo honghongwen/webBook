@@ -1,10 +1,10 @@
 ---
-home: false
+home: true
 heroImage: /work.png
-heroText: 小冯的Web笔记
+heroText: 山雨技术手册
 tagline: 前后端、运维技术手册
 actionText: 打开笔记 →
-actionLink: /front/html
+actionLink: /front/vue
 features:
 - title: 前端
   details: Html、Css、JavaScript、Vue相关技术栈
