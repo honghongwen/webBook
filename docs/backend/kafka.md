@@ -57,5 +57,6 @@ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --boots
 
 查看消费者组详情
 ```shell
-./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9191 --describe --group groupName
+./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9191 --describe --group consumerGroupName
 ```
+

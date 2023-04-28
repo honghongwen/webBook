@@ -83,7 +83,7 @@ gitbook自带五个插件，可以选择-去掉
       "weibo": null
     },
     "sidebar": {
-      "GitHub": "https://github.com/honghongwen"
+      "GitHub": "https://github.com/shanyuguangyun"
     }
   },
   "output": null,
@@ -119,5 +119,5 @@ gitbook自带五个插件，可以选择-去掉
 }
 ```
 
-[最终效果](https://honghongwen.github.io/gitBook)
+[最终效果](https://shanyuguangyun.github.io/gitBook)
 [可供参考文章](https://jiangminggithub.github.io/gitbook/)

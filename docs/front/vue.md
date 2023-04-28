@@ -457,7 +457,7 @@ requireAll(req)
 
 至此，一个基于vuex、aixos、vue-router支持svg、scss的vue2项目就已经构建完成了。当然，全局的layout还需自己编写。
 具体可查看演示项目，已经配置了可供开发的基本配置
-[演示项目](https://github.com/honghongwen/vue-temp)
+[演示项目](https://github.com/shanyuguangyun/vue-temp)
 
 [参考项目一](https://gcddblue.github.io/vue-admin-webapp/#/dashbord)
 [参考项目二](https://panjiachen.github.io/vue-element-admin/#/login?redirect=%2Fdashboard)
