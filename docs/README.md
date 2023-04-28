@@ -16,5 +16,5 @@ features:
 
 
 ::: slot footer
-Copyright © 2018-present [小饼干](https://github.com/honghongwen)
+Copyright © 2018-present [山雨光云](https://github.com/shanyuguangyun)
 :::
