@@ -1,19 +1,23 @@
 module.exports = {
-  base: "/webBook/",
+  base: "/front/vue",
   title: "小冯的Web手册",
   description: "小冯的Web手册",
+  
   themeConfig: {
     sidebarDepth: 3,
     nav: [
-      { text: "基础知识", link: "https://honghongwen.github.io/gitBook" },
-      { text: "GitHub", link: "https://github.com/honghongwen" },
+      { text: "基础知识", link: "https://shanyuguangyun.github.io/gitBook" },
+      { text: "GitHub", link: "https://github.com/shanyuguangyun" },
     ],
     sidebar: [
       {
         title: "前端", // 必要的
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2, // 可选的, 默认值是 1
-        children: ["/front/html", "/front/css", "/front/vue", "/front/nvm"],
+        children: [
+          "/front/vue", 
+          "/front/nvm"
+        ],
       },
       {
         title: "后端",

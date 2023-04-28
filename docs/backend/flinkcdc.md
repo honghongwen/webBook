@@ -383,3 +383,26 @@ mvn 安装本地jar包相关命令
 ```shell
 mvn install:install-file -Dfile=.\flink-sql-connector-oracle-cdc-2.1.1.jar -DgroupId=com.ververica -DartifactId=flink-connector-oracle-cdc -Dversion=2.1.1 -Dpackaging=jar
 ```
+
+
+oracle日志爆炸问题
+
+```shell
+docker exec -it oracle11g bash
+source /etc/profile
+sqlplus /nolog
+connect /as sysdba
+
+# 查看日志大小
+select * from V$FLASH_RECOVERY_AREA_USAGE;
+# 查看archive存放位置
+show parameter recover;
+
+exit
+rman target sys/pass
+# 检查无用的archive
+crosscheck archivelog all;
+删除截止到前一天的所有archivelog：
+delete archivelog until time 'sysdate-1';
+delete archivelog until time 'sysdate';
+```
