@@ -31,6 +31,13 @@ du -h --max-depth=0 *
 du -h --max-depth=1 software/
 ```
 
+查看io状态，用来排查是否有io密集型任务，1表示时间间隔；10表示时间，最后的指标%util越高则io负载越高，100%代表满负荷
+```shell
+iostat -x 1 10
+```
+
+定位io来源可以安装[iotop](http://guichaz.free.fr/iotop/)
+
 ### 查看日志相关
 
 最常用的实时查看日志
