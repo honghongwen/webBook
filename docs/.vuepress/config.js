@@ -1,13 +1,14 @@
 module.exports = {
   base: "/",
-  title: "山雨光云的技术手册",
-  description: "山雨光云的技术手册",
+  title: "山雨光云的小窝",
+  description: "山雨光云的小窝",
   
   themeConfig: {
     sidebarDepth: 3,
     nav: [
-      { text: "数据结构", link: "https://shanyuguangyun.github.io/dsBook" },
+      { text: "数据结构", link: "https://shanyuguangyun.github.io/dsBook/ds/xu" },
       { text: "基础知识", link: "https://shanyuguangyun.github.io/gitBook" },
+      { text: "快乐生活", link: "https://shanyuguangyun.github.io/happyLife" },
       { text: "GitHub", link: "https://github.com/shanyuguangyun" },
     ],
     sidebar: [
