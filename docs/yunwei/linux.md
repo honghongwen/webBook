@@ -38,6 +38,22 @@ iostat -x 1 10
 
 定位io来源可以安装[iotop](http://guichaz.free.fr/iotop/)
 
+### CPU相关
+
+简单的如top等就不说了，一些不常用的记一下
+监控每个CPU情况，每隔2s 统计3次
+```shell
+mpstat -P ALL 2 3
+```
+
+每个1s输出全部进程的cpu、内存等信息
+```shell
+pid stat 1
+
+# 也可以查看具体进程
+pidstat -p 95237 1
+```
+
 ### 查看日志相关
 
 最常用的实时查看日志
@@ -201,4 +217,13 @@ total 16644
 -rw-r--r-- 1 root root 2805808 2022-10-17 08:59 html-20221017-0859.zip
 ```
 
-## 常用脚本
+## windows文件字符转换
+有时将windows文件拷至linux，需要替换下字符
+```shell
+# 安装小工具dos2unix
+sudo yum install dos2unix
+
+# 进行转换
+dos2unix ./filename
+```
+
