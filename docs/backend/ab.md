@@ -18,7 +18,7 @@ ab -n 10 -c 1  -T application/json -p test.json  "http://localhost:8080/route/ru
 ```
 可以看到100%的请求都在151ms以下，且50%的请求都在106ms以下。
 
-![ab](image/ab.png)
+![ab](./image/ab.png)
 
 
 get请求直接去掉-p参数就ok 
