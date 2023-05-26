@@ -8,7 +8,7 @@ module.exports = {
     nav: [
       { text: "数据结构", link: "https://shanyuguangyun.github.io/dsBook/ds/xu" },
       { text: "基础知识", link: "https://shanyuguangyun.github.io/gitBook" },
-      { text: "框架源码", link: "" },
+      { text: "框架源码", link: "https://shanyuguangyun.github.io/sourceCodeBook" },
       { text: "生活集", link: "https://shanyuguangyun.github.io/happyLife" },
       { text: "GitHub", link: "https://github.com/shanyuguangyun" },
     ],
