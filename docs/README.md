@@ -1,9 +1,9 @@
 ---
 home: true
 heroImage: /work.png
-heroText: 山雨光云的小窝
-tagline: 山雨光云的小窝
-actionText: 进入小窝 →
+heroText: 山雨光云小集
+tagline: 山雨光云小集
+actionText: 进入小集 →
 actionLink: /front/vue
 features:
 - title: 前端
