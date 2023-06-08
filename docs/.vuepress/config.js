@@ -33,6 +33,7 @@ module.exports = {
           "/backend/easyexcel",
           "/backend/fdfs",
           "/backend/hadoop",
+          "/backend/elkf",
           "/backend/elasticsearch",
           "/backend/canal",
           "/backend/oraclecdc",
