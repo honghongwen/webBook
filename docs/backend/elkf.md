@@ -119,10 +119,104 @@ curl --cacert $ES_HOME/config/certs/http_ca.crt -u elastic https://localhost:920
 
 curl直接新增数据，可以直接去掉[]用 user:password输入密码
 ```shell
-curl --cacert $ES_HOME/config/certs/http_ca.crt -u elastic[:password] -X POST "https://localhost:9200/customer/_doc/1?pretty" -H 'Content-Type: application/json' -d' {   "fi rstname": "Jennifer",   "lastname": "Walters" } '
+curl --cacert $ES_HOME/config/certs/http_ca.crt -u elastic[:password] -X POST "https://localhost:9200/customer/_doc/1?pretty" -H 'Content-Type: application/json' -d' {   "firstname": "Jennifer",   "lastname": "Walters" } '
 
 curl --cacert ./http_ca.crt -u elastic:password -X GET "https://localhost:9200/customer/_doc/1?pretty"
 
 
 ```
+
+
+## 2.Kibana
+
+kibana也是一个重量级的应用，压缩文件都有264M，他不再仅仅是一个es的可视化工具了。具体可看[官方文档](https://www.elastic.co/guide/en/kibana/8.8/introduction.html)，说实话，如果只是为了可视化es数据，kibana有点过于重量级了，他是整个Elastic Stack生态的管理工具。但他还和一些云厂商的日志平台一样，提供如KQL等功能帮助快速搜索日志，还有丰富的仪表盘等功能等。
+
+
+### 2.1安装
+```shell
+curl -O https://artifacts.elastic.co/downloads/kibana/kibana-8.8.1-linux-x86_64.tar.gz
+curl https://artifacts.elastic.co/downloads/kibana/kibana-8.8.1-linux-x86_64.tar.gz.sha512 | shasum -a 512 -c - 
+tar -xzf kibana-8.8.1-linux-x86_64.tar.gz
+cd kibana-8.8.1/ 
+```
+
+因为要用到用户连接elasticsearch，所以最好先去elasticsearch下重置下内置用户kibana_system的密码
+```shell
+elasticsearch-reset-password -u kibana_system
+```
+
+
+### 2.2配置&启动
+修改了下配置 config/kibana.yml  kibana的配置同样不算少，具体可以跟着官网走，但是重要的如下。我的配置项
+
+```shell
+server.port: 5601
+server.host: "0.0.0.0"
+elasticsearch.hosts: ["https://localhost:9200"]
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "xxxx"
+elasticsearch.pingTimeout: 1500
+elasticsearch.requestTimeout: 30000
+elasticsearch.maxSockets: 1024
+elasticsearch.compression: false
+elasticsearch.shardTimeout: 30000
+elasticsearch.ssl.verificationMode: none
+```
+
+```shell
+nohup ./bin/kibana &
+```
+
+第一次启动后去页面访问可能要你输入kibana的token，这个是之前启动elasticsearch打印出来的。如果过了半个小时则可以重新生成
+```shell
+bin/elasticsearch-create-enrollment-token -s kibana
+```
+
+### 2.3创建视图
+启动后，进入discovery之后，就可以创建视图了，不过要先有数据，一个视图对应到一个或多个索引或数据流。
+保存时还可以作为临时视图，这样别人就看不见你创建的视图了。关于Discover页面的用法，相信之前用过阿里的日志平台的可太熟悉了。
+![kbn1](./image/kbn1.png)
+![kbn2](./image/kbn2.png)
+
+### 2.4官网示例
+启动kibana后，官网有个示例数据的例子，可以跟着熟悉下kibana用法
+[kibana示例数据](https://www.elastic.co/guide/en/kibana/8.8/get-started.html)
+
+
+### 2.5开发工具
+kibana自带了很好用的开发工具，后续我们用到logstash去做过滤的时候匹配自己的日志格式要用到grok表达式、以及查询分析es索引的时候，有网页版的console。非常好用。[开发工具地址](https://www.elastic.co/guide/en/kibana/8.8/xpack-grokdebugger.html)
+
+### 2.6用户管理
+和其他国外的软件很像，如confluence或者jenkins等，kibana有一套自己的页面权限。 如我不需要给普通用户太多复杂的功能，直接创建一个新的空间，只需要仪表盘和Discover跟Stack Management的功能。新空间和默认的空间是隔离开的，数据视图也是隔离开的。所以更像是给不同部门或组开新空间。
+
+然后添加新的角色，给角色分配空间，然后选择可以操作的索引。以及kibana页面权限。 比如给某个空间的管理员放开Stack Managerment的权限。而普通用户只需要Discover和Dashboard的权限。
+
+添加用户，分配对应角色。
+
+
+建完空间、角色、用户后，整个kibana的配置就ok了。
+
+
+## 3.Filebeat
+新版本的logstash推荐你使用filebeat去收集web日志。
+
+
+### 2.1安装
+```shell
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.8.1-linux-x86_64.tar.gz
+tar xzvf filebeat-8.8.1-linux-x86_64.tar.gz
+```
+
+
+
+
+
+
+## 2.Logstash   
+
+起初认为logstash也是个轻量的进程，下完压缩包后发现300多m，其还和es一样，还内置了个17版本jdk.
+
+关于Logstash[官方文档](https://www.elastic.co/guide/en/logstash/current/first-event.html)
+
+
 
