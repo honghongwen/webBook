@@ -6,10 +6,8 @@ module.exports = {
   themeConfig: {
     sidebarDepth: 3,
     nav: [
-      { text: "数据结构", link: "https://shanyuguangyun.github.io/dsBook/ds/xu" },
       { text: "基础知识", link: "https://shanyuguangyun.github.io/gitBook" },
-      { text: "框架源码", link: "https://shanyuguangyun.github.io/sourceCodeBook" },
-      { text: "生活集", link: "https://shanyuguangyun.github.io/happyLife" },
+      { text: "LeetCode", link: "https://github.com/shanyuguangyun/leetcode" },
       { text: "GitHub", link: "https://github.com/shanyuguangyun" },
     ],
     sidebar: [

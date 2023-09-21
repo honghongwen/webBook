@@ -1,4 +1,4 @@
-# 一次被sshd恶意挖矿的经历
+# 脚本攻击处理
 
 ## 过程
 
@@ -44,7 +44,13 @@ google了下有人说是根据公钥爆破的
 
 后续继续观察，/var/tmp下没有继续在下载文件了。
 
-后续继续做观察，实在不行下个[Clamav](https://github.com/Cisco-Talos/clamav)扫下病毒或者用下[denyhosts](https://github.com/denyhosts/denyhosts)试试。
+实在不行下个[Clamav](https://github.com/Cisco-Talos/clamav)扫下病毒或者用下[denyhosts](https://github.com/denyhosts/denyhosts)试试。
 
 
-后续又观察了几天，发现还是不行，还是会出现这个sshd，也不知道是不是最近我下flink的时候或者啥的东西有漏洞还是什么。据说redis没密码会有漏洞，但是我本机没装redis，老版本的gitlab内置了个redis，而且老版本gitlab本身也有漏洞。等到时候学习完后老老实实把一些端口关闭掉，Clamav扫一遍。
+后续又观察了几天，发现还是不行，还是会出现这个sshd，也不知道是不是最近我下flink的时候或者啥的东西有漏洞还是什么。
+
+后续使用ps -aux 发现一直有个wget操作，而且这个进程很秀，每次有好几个任务，执行完后立马消失，PID一直重新生成。
+想了想暂时没啥好办法，把wget的命令给重新命名了。这样他执行不了wget命令。
+然后后续刚好公司做安全等保，拿火绒扫了下，删了三个文件。再之后发现服务器就正常了。
+
+得到的教训就是能不开外网端口就不开外网端口，开了外网端口的能做好白名单就做白名单。不然木马脚本真是无孔不入，太夸张了。

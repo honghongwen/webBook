@@ -79,7 +79,26 @@ sidekiq                用于在后台执行队列任务（异步执行）
 ```
 
 ## 常见问题
-502错误
+1.502错误
 ```shell
 sudo chmod -R o+x /var/opt/gitlab/gitlab-rails
+```
+
+2.内存过大
+
+由于gitlab占用内存较高，如果人员团队较少，不是提供给平台使用而是小组内部使用，可以适当缩小内存，主要通过以下几个方面  
+修改/etc/gitlab/gitlab.rb
+```shell
+# unicorn进程数改小，最小2个，内存占用调小
+
+unicorn['worker_processes'] = 2 
+unicorn['worker_memory_limit_min'] = "300 * 1 << 20"
+unicorn['worker_memory_limit_max'] = "500 * 1 << 20"
+
+# 关闭普罗米修斯及调小postgresql内存
+sidekiq['concurrency'] = 4
+prometheus_monitoring['enable'] = false
+postgresql['shared_buffers'] = 256M
+
+
 ```
