@@ -1,0 +1,65 @@
+# <center>山雨光云的简历
+---
+> 个人信息：  
+
+性别: 男 &nbsp; ｜&nbsp; 年龄: 29 &nbsp;  | &nbsp;  Java  
+电话: 175-2127-9833 &nbsp; | &nbsp;  email: jiuhuarfengwen@gmail.com  
+本科 ｜ 软件工程 ｜ 2014-2018
+
+---
+> 专业技能：  
+
+* 扎实的Java基础，熟悉如集合、io、juc等基础知识，对源码有一定理解，了解jvm垃圾回收机制及算法，熟悉常用数据结构，了解常用算法，了解常用设计模式等。
+* 熟悉常用RDB、如mysql、oracle等，熟练如sql优化，了解底层数据结构及mvcc等。
+* 熟练使用Redis内存数据库，了解如缓存穿透、击穿、雪崩等。了解底层数据结构等。
+* 了解使用kafka、flink、es等常用中间件，了解如分区、副本、ISR等设计概念，了解数据流处理等。
+* 了解使用Spring Cloud Alibaba生态常用框架，包括如Dubbo、Rocket MQ、Sentinel、网关等，有格林威治版本实际项目经验，了解常用限流算法及熔断原理等。
+* 了解使用netty，了解NIO、Reactor模型、零拷贝，常用内置handler等，有实际项目经验。
+
+---
+
+> 工作经历：
+
+xx物流  
+xx教育  
+xx电商公司
+
+均为小厂，研发部门最多xx教育，平台约200+技术人员。
+
+---
+
+> 项目经验：
+
+项目名：xx物流-a6    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   角色：全栈  
+
+* xx在线下单系统全栈开发，接入promethus+kibana对项目情况做监控。
+* 配合运维使用keepalived做nginx高可用。
+* 热敏单服务使用熔断保证第三方接口地址解析失败时能不阻塞项目，保证系统稳定运行。
+* 使用xxl-job优化原有物流轨迹推送，保证推送可控高效。
+* 优化请求被其他服务阻塞，分析nginx日志解决第三方打印电子面单超时问题。
+* 调研将Oracle数据同步入ES方案，做查询和写入分离等。
+
+
+项目名：xx流量跟进系统   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    角色：Java
+
+* 高转流量池回收开发，解决如Dubbo接口重试导致的重复分配问题，使用CountDownLatch+线程池进行分批回收。
+* 对接直播平台下发kafka消息，开发统计模块新需求。
+* 流量溯源sql优化，矫正流量无法溯源或错误溯源。
+* 对接罗盘系统下发消息，通过策略模式封装流量各节点并推送给跟进人企业微信。
+* 修复如缓存序列号方式不对导致的客户端值为null等。
+
+项目名：工单系统    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    角色：Java
+
+* 梳理业务并渐次重构工单系统代码，如收款消息、退款消息、转课消息以及相关接口，解决维护困难和疑难杂症。
+* 维护老系统对接新需求，如工单嫁接、新渠道工单分成、新预收款需求等。
+* 使用xxl-job读取excel数据批量修复各部门分成数据，协助解决财务对账问题。
+
+项目名：xx电商系统  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    角色：Java
+
+* 维护商品spu、sku，负责整个商品端rpc和web接口开发。
+* 设计并开发扫瓶盖二维码领红包系统，对接微信公众号相关接口并使用Redisson防止奖金被重复领取。
+
+---
+> 个人总结：
+
+期望工作生活平衡，但是也有较强责任感，不想加班前提肯定是保证系统平稳运行。看过Redis、Kafka、Netty、架构相关书籍，个人认为自己目前处于技术瓶颈，期望新公司使用较新的技术栈。

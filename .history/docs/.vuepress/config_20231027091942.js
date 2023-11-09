@@ -42,7 +42,6 @@ module.exports = {
           "/backend/problem",
           "/backend/ab",
           "/backend/499",
-          "/backend/jianli"
         ],
       },
       {
