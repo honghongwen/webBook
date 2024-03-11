@@ -30,6 +30,7 @@ module.exports = {
           "/backend/logback",
           "/backend/easyexcel",
           "/backend/fdfs",
+          "/backend/redis",
           "/backend/hadoop",
           "/backend/elkf",
           "/backend/elasticsearch",
@@ -41,8 +42,7 @@ module.exports = {
           "/backend/intelij",
           "/backend/problem",
           "/backend/ab",
-          "/backend/499",
-          "/backend/jianli"
+          "/backend/499"
         ],
       },
       {
