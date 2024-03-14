@@ -257,10 +257,11 @@ type为string,list,hash,set,zset，而encoding则分为具体的int,embstr,raw,q
 
 * 常用命令
   * lpush rpush
-  * lpop rpop
-  * llen
-  * lrange
   * lrem
+  * lpop rpop
+  * linsert
+  * lrange
+  * llen
   * ...
 * 配置
   * list-max-ziplist-size
@@ -271,12 +272,63 @@ type为string,list,hash,set,zset，而encoding则分为具体的int,embstr,raw,q
         vim /usr/local/etc/redis.conf
         # 修改为-1 即4kb
         list-max-ziplist-size -1
-
-        
     ```
-
 ### 2.3 哈希表
-
-
+* 底层数据结构
+  * ziplist
+  * hashtable
+  * listpack
+* 常用命令
+  * hset
+  * hdel
+  * hsetnx
+  * hkeys
+  * hvals
+  * hgetall
+  * hget
+  * hlen
+  * ...
+* 配置
+  * hash-max-ziplist-value
+  * hash-max-ziplist-entries  
+  很明了的encoding转换规则，当entries大于512个或值内单个元素字节大于64时，由listpack编码转为hashtable编码。
 ### 2.4 集合
+* 底层数据结构
+  * intset
+  * hashtable
+  * listpack
+* 常用命令
+  * sadd
+  * spop key 返回随机元素
+  * srem key member1... 移除一个或多个值
+  * smembers key 返回所有成员
+  * srandmember key [count] 返回一个或多个成员，不删除
+  * scard key 返回集合len
+  * sinter key1 key2 返回给定集合的交集
+  * sinterstore dest key1 key2 交集并保存
+  * sdiff key1 key2 差集
+  * sdiffstore dest key1 key2 返回给定集合的差集并保存到destination中
+  * sunion key1 key2 并集
+  * sunionstore dest key1 key2 并集并保存
+* 配置
+  * set-max-intset-entries
 ### 2.5 有序集合
+* 底层数据结构
+  * ziplist
+  * listpack
+  * skiplist
+  ![redis15](./image/redis15.png)
+  跳表有些特殊，除了listpack外，如果采取skiplist编码，还采用了hashtable用来保存键值对，以优化根据成员查找分值这一操作的时间复杂度由O(logN)变为O(1)。即zset底层定义是这样。
+  ![redis16](./image/redis16.png)
+  ```c
+  typedef struct zset {
+    zskiplist *zsl;
+    dict *dict;
+  } zset;
+  ```
+* 常用命令
+  * zadd key score1 member1 ...
+  * 
+* 配置
+  * zset-max-ziplist-entries
+  * zset-max-ziplist-value

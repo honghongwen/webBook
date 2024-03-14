@@ -7,6 +7,7 @@ module.exports = {
     sidebarDepth: 3,
     nav: [
       { text: "基础知识", link: "https://shanyuguangyun.github.io/gitBook" },
+      { text: "问卷网页", link: "https://qms.shanyuguangyun.cn" },
       { text: "LeetCode", link: "https://github.com/shanyuguangyun/leetcode" },
       { text: "GitHub", link: "https://github.com/shanyuguangyun" },
     ],
