@@ -43,7 +43,8 @@ module.exports = {
           "/backend/intelij",
           "/backend/problem",
           "/backend/ab",
-          "/backend/499"
+          "/backend/499",
+          "/backend/ssm"
         ],
       },
       {
