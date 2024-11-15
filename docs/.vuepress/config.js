@@ -44,7 +44,8 @@ module.exports = {
           "/backend/problem",
           "/backend/ab",
           "/backend/499",
-          "/backend/ssm"
+          "/backend/ssm",
+          "/backend/oracle"
         ],
       },
       {

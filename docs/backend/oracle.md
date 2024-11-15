@@ -595,5 +595,547 @@ SQL> select deptno,ename,sal from emp where sal > all
 ```
 
 
-### 3.3 PL/SQL
+## 4.PL/SQL
 
+语法
+```sql
+[DECLARE]
+--声明部分，可选
+BEGIN
+--执行部分，必需
+[EXCEPTION]
+--异常处理部分，可选
+END
+```
+
+```sql
+SQL> set serveroutput on
+SQL> declare
+  2    a int:=100;
+  3    b int:=200;
+  4    c number;
+  5  begin
+  6    c:=(a+b)/(a-b);
+  7    dbms_output.put_line(c);
+  8  exception
+  9    when zero_divide then
+  10    dbms_output.put_line('除数不许为零!');
+  11  end;
+  12  /
+```
+
+
+### 4.1 数据类型
+
+#### 4.1.1 基本类型
+> 数值
+* number
+整数或浮点数。number(p,s) p为精度，所有有效数字个数，s为刻度范围，小数点右边小数位的个数。
+* binary_integer 
+* pls_integer
+> 字符
+* varchar2
+可变长度字符串，最大长度32762，而数据库中最大长度为4000，因此pl/sql中的varchar2不可赋值于pl/sql中的varchar2，而只能赋值给LONG类型变量。
+* LONG
+表示可变字符串，最大长度32762,数据库中LONG最多有2GB，所以所有的字符串变量都可赋值给它。
+* char
+固定长度，不足会以空格补齐。默认长度为1。
+
+* NCHAR
+* NVARCHAR2
+pl/sql 8.0之后引入的类型，根据各国字符集确定长度。
+> 日期类型
+* date
+七个字节，世纪、年、月、日、天、小时、分钟、秒
+> 布尔类型
+
+#### 4.1.2 特殊类型
+> %TYPE
+声明与指定列相同的数据类型
+```sql
+declare
+var_job emp.job%type;
+```
+
+> record
+类似class,将多个列组成一条记录。
+```sql
+declare
+  type emp_record is record
+  (
+    var_name varchar2(20),
+    var_job varchar2(20),
+    var_sal number
+  );
+  empinfo emp_record;
+begin
+  select ename,job,sal into empinfo from emp where empno = 7369;
+  dbms_output.put_line('ename:' || empinfo.var_name || ' ,job:' || empinfo.var_job);
+end;
+/
+```
+
+> %rowtype
+直接一行数据的变量名。
+```sql
+declare
+  emp_row emp%rowtype;
+begin
+  select * into emp_row from emp where empno = 7369;
+  dbms_output.put_line('ename:' || emp_row.ename || ' ,job:' || emp_row.job);
+end;
+/  
+```
+
+### 4.2 语法
+
+> if判断
+```sql
+IF < condition_expression1 > THEN
+plsql_sentence_1;
+ELSIF < condition_expression2 > THEN
+plsql_sentence_2;
+…
+ELSE
+plsql_sentence_n;
+END IF;
+```
+
+> case判断
+```sql
+CASE < selector>
+WHEN <expression_1> THEN plsql_sentence_1;
+WHEN <expression_2> THEN plsql_sentence_2;
+…
+WHEN <expression_n> THEN plsql_sentence_n;
+[ELSE plsql_sentence;]
+END CASE;
+```
+
+> loop循环
+```sql
+LOOP
+  plsql_sentence;
+EXIT WHEN end_condition_ exp
+END LOOP;
+```
+
+```sql
+SQL> set serveroutput on
+SQL> declare
+  2    sum_i int:= 0;     --定义整数变量，存储整数和
+  3    i int:= 0;         --定义整数变量，存储自然数
+  4  begin
+  5    loop               --循环累加自然数
+  6      i:=i+1;                                              --得出自然数
+  7      sum_i:= sum_i+i;                                     --计算前n个自然数的和
+  8      exit when i = 100;                                   --当循环100次时，程序退出循环体
+  9    end loop;
+  10   dbms_output.put_line('前100个自然数的和是：'||sum_i);  --计算前100个自然数的和
+  11  end;
+  12  /
+```
+
+> while循环
+```sql
+WHILE condition_expression LOOP
+plsql_sentence;
+END LOOP;
+```
+
+```sql
+SQL> set serveroutput on
+SQL> declare
+  2    sum_i int:= 0;                                         --定义整数变量，存储整数和
+  3    i int:= 0;                                             --定义整数变量，存储自然数
+  4  begin
+  5    while i<=99 loop                                       --当i的值等于100时，程序退出WHILE循环
+  6      i:=i+1;                                              --得出自然数
+  7      sum_i:= sum_i+i;                                     --计算前n个自然数的和
+  8    end loop;
+  9    dbms_output.put_line('前100个自然数的和是：'||sum_i);  --计算前100个自然数的和
+  10  end;
+  11  /
+```
+
+> for循环
+```sql
+FOR variable_ counter_name in [REVERSE] lower_limit..upper_limit LOOP
+plsql_sentence;
+END LOOP;
+```
+
+```sql
+SQL> set serveroutput on
+SQL> declare
+  2    sum_i int:= 0;                                     --定义整数变量，存储整数和
+  3  begin
+  4    for i in reverse 1..100 loop                       --遍历前100个自然数
+  5      if mod(i,2)=0 then                               --判断是否为偶数
+  6        sum_i:=sum_i+i;                                --计算偶数和
+  7      end if;
+  8    end loop;
+  9    dbms_output.put_line('前100个自然数中偶数之和是：'||sum_i);
+  10  end;
+  11  /
+```
+
+> goto语法
+```sql
+… --程序其他部分
+<<goto_mark>>         --定义了一个转向标签goto_mark
+… --程序其他部分
+IF no>98050 THEN
+    GOTO goto_mark;  --如果条件成立，则转向goto_mark继续执行
+… --程序其他部分
+```
+
+### 4.3 游标
+
+> 显式游标
+包括声明、打开、读取（多次）、关闭四个步骤。
+
+```sql
+CURSOR cur_name[(input_parameter1[,input_parameter2]…)]
+[RETURN  ret_type]
+IS select_ sentence;
+```
+
+```sql
+set serveroutput on;
+declare
+    cursor cur_emp (var_job in varchar2:='MANAGER') --定义一个游标，输入参数var_job，类型、初始值。
+    is select empno, ename, sal from emp where job = var_job; -- 游标查询语句，提供了结果集
+    type emp_record is record(
+        var_empno emp.empno%type,
+        var_ename emp.ename%type,
+        var_sal emp.sal%type
+    );
+    emp_row emp_record;
+begin
+    open cur_emp('MANAGER'); -- 打开游标，执行select语句，将查询结果装入内存。输入参数可选，如SALESMAN
+    fetch cur_emp into emp_row; -- 读取游标
+    while cur_emp%found loop
+        dbms_output.put_line(emp_row.var_ename || '的编号是：'|| emp_row.var_empno || ',薪水是：' || emp_row.var_sal);
+        fetch cur_emp into emp_row;
+    end loop;
+    close cur_emp; -- 关闭游标，释放空间
+end;
+/
+```
+
+在使用游标（包括显式和隐式）的FOR循环中，可以声明游标，但不用进行打开游标、读取游标和关闭游标等操作，这些由Oracle系统自动完成。
+```sql
+SQL> set serveroutput on
+SQL> declare
+  2   cursor cur_emp is
+  3   select * from emp
+  4   where deptno = 30;                                        --检索部门编号为30的员工信息
+  5  begin
+  6    for emp_record in cur_emp                                --遍历员工信息
+  7    loop
+  8      dbms_output.put('员工编号：'||emp_record.empno);       --输出员工编号
+  9      dbms_output.put('；员工名称：'||emp_record.ename);     --输出员工名称
+  10      dbms_output.put_line('；员工职务：'||emp_record.job);  --输出员工职务
+  11    end loop;
+  12  end;
+  13  /
+```
+
+> 隐式游标
+
+隐式游标主要是update、delete的执行结果。总是反应最近一条sql的处理结果。隐式游标由sql%拼上属性。
+```sql
+set serveroutput on;
+declare
+begin
+    update emp set sal = sal + 100 where job = 'SALESMAN';
+    if sql%found then
+        dbms_output.put_line('本次涨薪员工数目为:' || sql%rowcount);
+    else
+        dbms_output.put_line('本次无员工涨薪');
+    end if;
+end;
+/
+```
+
+> 游标属性
+
+* %found
+  至少影响了一行数据
+* %notfound
+* %rowcount
+* %isopen
+
+> 游标变量
+
+
+### 4.4 异常
+
+* oracle内置异常
+```sql
+set serveroutput on;
+declare
+    var_ename emp.ename%type;
+    var_sal emp.sal%type;
+begin
+    select ename,sal into var_ename,var_sal from emp where deptno = 10;
+    if sql%found then
+        dbms_output.put_line('ename:'|| var_ename || ' salary:' || var_sal);
+    end if;
+exception
+    when too_many_rows then
+        dbms_output.put_line('记录不止一行');
+    when no_data_found then
+        dbms_output.put_line('无数据记录');
+end;
+/
+```
+
+* 自定义异常
+```sql
+set serveroutput on;
+declare
+    primary_itrant exception;
+    pragma exception_init(primary_itrant,-00001);
+begin
+   insert into dept values(10,'开发部','广州');
+exception
+    when primary_itrant then
+        dbms_output.put_line('主键重复');
+end;
+/
+```
+
+可以使用raise关键字抛出异常
+
+### 4.5 过程、函数、触发器、包
+>上述PL/SQL块都是匿名的，其中包含的代码无法保存到Oracle数据库中。但很多时候需要保存PL/SQL块，以便随后可以重复使用。这意味着，PL/SQL块需要一个名称，这样才能调用或者引用它。命名的PL/SQL块可以被独立编译并存储在数据库中，Oracle提供了4种可以存储的PL/SQL块，即过程、函数、触发器和包。
+
+#### 4.5.1 存储过程
+>存储过程是一种命名的PL/SQL块，它既可以没有参数，也可以有若干个输入、输出参数，甚至可以有多个既作为输入又作为输出的参数，但它通常没有返回值。存储过程被保存在数据库中，它不可以被SQL语句直接执行或调用，只能通过EXECUT命令执行或在PL/SQL块内部被调用。由于存储过程是已经编译好的代码，因此在被调用或引用时，其执行效率非常高。
+
+```sql
+CREATE [OR REPLACE] PROCEDURE pro_name [(parameter1[,parameter2]…)] IS|AS
+BEGIN
+  plsql_sentences;
+[EXCEPTION]
+  [dowith _ sentences;]
+END [pro_name];
+```
+
+上述语法中的parameter1是存储过程被调用／执行时用到的参数，而不是存储过程内定义的内部变量，内部变量要在IS|AS关键字后面定义，并使用分号(;)结束。
+
+* 无参数
+```sql
+create or replace procedure pkd_insert_dept is
+begin
+    insert into dept values(99, '开发部门','广州');
+    commit;
+exception
+    when OTHERS then
+        dbms_output.put_line('已经创建');
+end pkd_insert_dept;
+/
+```
+调用
+```sql
+set serveroutput on;
+execute pkd_insert_dept;
+
+-- 或者
+declare
+set serveroutput on;
+begin
+    pkd_insert_dept;    
+end;
+/
+```
+
+
+* 带参数
+```sql
+create or replace procedure pkd_insert_dept_with_param(
+    deptno in number,
+    dname in varchar2,
+    loc in varchar2)
+is
+begin
+    insert into dept values(deptno,dname,loc);
+    commit;
+end;
+/
+```
+调用
+```sql
+-- 按名称
+declare
+begin
+    pkd_insert_dept_with_param(dname=>'采购部', deptno=>98, loc=>'合肥');
+end;
+/
+-- 按顺序
+begin
+      pkd_insert_dept_with_param(98,'采购部','合肥');
+end;
+/
+```
+
+
+* 包含输出参数
+```sql
+create or replace procedure pkd_select_dept(
+    var_deptno in number,
+    var_dname out dept.dname%type,
+    var_loc out dept.loc%type
+) is
+begin
+    select dname,loc into var_dname,var_loc from dept where deptno = var_deptno;
+exception
+    when no_data_found then
+    dbms_output.put_line('无数据');
+end;
+```
+调用
+```sql
+declare
+    var_dname dept.dname%type;
+    var_loc dept.loc%type;
+begin
+    pkd_select_dept(98,var_dname,var_loc);
+    dbms_output.put_line('部门名称：' || var_dname || '部门地址：' || var_loc);
+end;
+/
+```
+
+使用exec执行需要先定义变量
+```sql
+SQL> variable var_dname varchar2(50);
+SQL> variable var_loc varchar2(50);
+
+SQL> exec select_dept(15,:var_dname,:var_loc);
+
+SQL> print var_dname var_loc;
+```
+
+
+#### 4.5.2 函数
+>函数一般用于计算和返回一个值，可以将经常需要使用的计算或功能写成一个函数。函数的调用是表达式的一部分，而过程的调用是一条PL/SQL语句
+
+```sql
+CREATE [OR REPLACE] FUNCTION fun_name[(parameter1[,parameter2]…) RETURN data_type IS
+  [inner_variable]
+BEGIN
+  plsql_ sentence;
+[EXCEPTION]
+  [dowith _ sentences;]
+END [fun_name];
+```
+
+```sql
+create or replace function func_avg_sal_dept(
+    param_deptno number,
+    param_dname varchar2
+) 
+return number 
+is
+    vo_avg_sal number;
+begin
+    if param_deptno is not null then
+        select avg(sal) into vo_avg_sal from emp where deptno = param_deptno;
+    else 
+        select avg(sal) into vo_avg_sal from emp e left join dept d on e.deptno = d.deptno where d.dname = param_dname;
+    end if;
+    return (vo_avg_sal);
+exception
+    when others then
+        dbms_output.put_line('出现未知异常');
+    return (0);
+end;
+/
+```
+
+调用
+```sql
+declare
+    vo_avg_sal number;
+begin
+    vo_avg_sal:=func_avg_sal_dept(param_deptno=>10,param_dname=>'');
+    dbms_output.put_line('平均工资：'||vo_avg_sal);
+end;
+/
+```
+
+#### 4.5.3 触发器
+```sql
+CREATE [OR REPLACE] TRIGGER tri_name
+  [BEFORE | AFTER | INSTEAD OF] tri_event
+  ON table_name | view_name | user_name | db_name
+  [FOR EACH ROW [WHEN tri_condition]
+BEGIN
+plsql_sentences;
+END tri_name;
+```
+
+#### 4.5.4 程序包
+
+* 包
+```sql
+CREATE [OR REPLACE ] PACKAGE pack_name IS
+[declare_variable];
+[declare_type];
+[declare_cursor];
+[declare_function];
+[declare_ procedure];
+END [pack_name];
+```
+
+* 包主体
+```sql
+CREATE [OR REPLACE] PACKAGE BODY pack_name IS
+  [inner_variable]
+  [cursor_body]
+  [function_title]
+  {BEGIN
+    fun_plsql;
+  [EXCEPTION]
+    [dowith _ sentences;]
+  END [fun_name]}
+  [procedure_title]
+  {BEGIN
+    pro_plsql;
+  [EXCEPTION]
+    [dowith _ sentences;]
+  END [pro_name]}
+…
+END [pack_name];
+```
+
+```sql
+create or replace package pkg_dept is
+function func_get_deptname(param_deptno number) return varchar2;
+procedure pkd_insert_dept(param_deptno number,param_deptname varchar2,param_loc varchar2);
+end pkg_dept;
+```
+```sql
+create or replace package body pkg_dept is
+    function func_get_deptname(param_deptno number) return varchar2 is
+        vo_deptname dept.dname%type;
+    begin
+        select dname into vo_deptname from dept where deptno=param_deptno;
+        return (vo_deptname);
+    exception
+        when others then
+        dbms_output.put_line('无该部门');            
+        return ('');
+    end func_get_deptname;
+
+    procedure pkd_insert_dept(param_deptno number,param_deptname varchar2,param_loc varchar2) is
+    begin
+        insert into dept values(param_deptno,param_deptname,param_loc);
+    exception
+        when others then
+        dbms_output.put_line('新增部门错误');
+    end pkd_insert_dept;
+end pkg_dept;
+```
