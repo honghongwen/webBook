@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redis学习 | 山雨光云小集</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="山雨光云小集">
+    
+    <link rel="preload" href="/assets/css/0.styles.5ab8ebd7.css" as="style"><link rel="preload" href="/assets/js/app.1211b944.js" as="script"><link rel="preload" href="/assets/js/2.d9cdd38b.js" as="script"><link rel="preload" href="/assets/js/3.7bd32064.js" as="script"><link rel="prefetch" href="/assets/js/10.8d543d8c.js"><link rel="prefetch" href="/assets/js/11.2cfcc750.js"><link rel="prefetch" href="/assets/js/12.54781427.js"><link rel="prefetch" href="/assets/js/13.f450e900.js"><link rel="prefetch" href="/assets/js/14.f76a28e8.js"><link rel="prefetch" href="/assets/js/15.fb7f9400.js"><link rel="prefetch" href="/assets/js/16.9234d627.js"><link rel="prefetch" href="/assets/js/17.e262864f.js"><link rel="prefetch" href="/assets/js/18.4e875c29.js"><link rel="prefetch" href="/assets/js/19.a995da09.js"><link rel="prefetch" href="/assets/js/20.adc26647.js"><link rel="prefetch" href="/assets/js/21.55c48e84.js"><link rel="prefetch" href="/assets/js/22.3f3a83d0.js"><link rel="prefetch" href="/assets/js/23.deed6bd2.js"><link rel="prefetch" href="/assets/js/24.746bbc50.js"><link rel="prefetch" href="/assets/js/25.2e425410.js"><link rel="prefetch" href="/assets/js/26.0c29c466.js"><link rel="prefetch" href="/assets/js/27.5e6bedfd.js"><link rel="prefetch" href="/assets/js/28.8e4a8ccc.js"><link rel="prefetch" href="/assets/js/29.020ccf97.js"><link rel="prefetch" href="/assets/js/30.43d740de.js"><link rel="prefetch" href="/assets/js/31.35476f65.js"><link rel="prefetch" href="/assets/js/32.20057b37.js"><link rel="prefetch" href="/assets/js/33.fd9470e1.js"><link rel="prefetch" href="/assets/js/34.01313131.js"><link rel="prefetch" href="/assets/js/35.45efba1c.js"><link rel="prefetch" href="/assets/js/36.74e309b1.js"><link rel="prefetch" href="/assets/js/37.e0900611.js"><link rel="prefetch" href="/assets/js/38.a0e0b9f1.js"><link rel="prefetch" href="/assets/js/39.5284a6de.js"><link rel="prefetch" href="/assets/js/4.642422bc.js"><link rel="prefetch" href="/assets/js/40.932439c4.js"><link rel="prefetch" href="/assets/js/41.ee7ac8cc.js"><link rel="prefetch" href="/assets/js/42.dc683951.js"><link rel="prefetch" href="/assets/js/43.c38eb04b.js"><link rel="prefetch" href="/assets/js/44.3bdc7170.js"><link rel="prefetch" href="/assets/js/45.fdd93da2.js"><link rel="prefetch" href="/assets/js/5.3bc68866.js"><link rel="prefetch" href="/assets/js/6.f8936891.js"><link rel="prefetch" href="/assets/js/7.6d48973a.js"><link rel="prefetch" href="/assets/js/8.1a64b73c.js"><link rel="prefetch" href="/assets/js/9.ff7216d2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5ab8ebd7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">山雨光云小集</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://shanyuguangyun.github.io/gitBook" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  基础知识
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://qms.shanyuguangyun.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  问卷网页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/shanyuguangyun/leetcode" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/shanyuguangyun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://shanyuguangyun.github.io/gitBook" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  基础知识
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://qms.shanyuguangyun.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  问卷网页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/shanyuguangyun/leetcode" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/shanyuguangyun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/front/vue.html" class="sidebar-link">Vue知识</a></li><li><a href="/front/nvm.html" class="sidebar-link">Nvm管理Node版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>后端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/springboot.html" class="sidebar-link">SpringBoot</a></li><li><a href="/backend/threadpool.html" class="sidebar-link">Treadpool项目中应用</a></li><li><a href="/backend/logback.html" class="sidebar-link">LogBack日志配置</a></li><li><a href="/backend/easyexcel.html" class="sidebar-link">EasyExcel使用</a></li><li><a href="/backend/fdfs.html" class="sidebar-link">FDFS使用</a></li><li><a href="/backend/redis.html" aria-current="page" class="active sidebar-link">Redis学习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-底层数据结构" class="sidebar-link">1.底层数据结构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-1-sds" class="sidebar-link">1.1 SDS</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-2-链表" class="sidebar-link">1.2 链表</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-3-字典" class="sidebar-link">1.3 字典</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-4-跳表" class="sidebar-link">1.4 跳表</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-5-整数数组" class="sidebar-link">1.5 整数数组</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-6-压缩列表" class="sidebar-link">1.6 压缩列表</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_1-7-扩展" class="sidebar-link">1.7 扩展</a></li></ul></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_2-应用层数据对象" class="sidebar-link">2.应用层数据对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/redis.html#_2-1-字符串" class="sidebar-link">2.1 字符串</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_2-2-列表" class="sidebar-link">2.2 列表</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_2-3-哈希表" class="sidebar-link">2.3 哈希表</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_2-4-集合" class="sidebar-link">2.4 集合</a></li><li class="sidebar-sub-header"><a href="/backend/redis.html#_2-5-有序集合" class="sidebar-link">2.5 有序集合</a></li></ul></li></ul></li><li><a href="/backend/hadoop.html" class="sidebar-link">Hadoop</a></li><li><a href="/backend/elkf.html" class="sidebar-link">ELK+Filebeat的搭建</a></li><li><a href="/backend/elasticsearch.html" class="sidebar-link">Elasticsearch</a></li><li><a href="/backend/canal.html" class="sidebar-link">Canal同步mysql到ES</a></li><li><a href="/backend/oraclecdc.html" class="sidebar-link">Oracle CDC调研比较</a></li><li><a href="/backend/flinkcdc.html" class="sidebar-link">Flink-CDC同步Oracle全量+增量数据</a></li><li><a href="/backend/kafka.html" class="sidebar-link">Kafka学习总结</a></li><li><a href="/backend/arthas.html" class="sidebar-link">Arthas</a></li><li><a href="/backend/intelij.html" class="sidebar-link">Intelij一些设置</a></li><li><a href="/backend/problem.html" class="sidebar-link">常遇到的问题</a></li><li><a href="/backend/ab.html" class="sidebar-link">ab性能测试</a></li><li><a href="/backend/499.html" class="sidebar-link">一次Nginx499状态码排查</a></li><li><a href="/backend/ssm.html" class="sidebar-link">SSM项目</a></li><li><a href="/backend/oracle.html" class="sidebar-link">Oracle</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>运维手册</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/yunwei/vmware.html" class="sidebar-link">VMware</a></li><li><a href="/yunwei/nginx.html" class="sidebar-link">Nginx</a></li><li><a href="/yunwei/linux.html" class="sidebar-link">Linux</a></li><li><a href="/yunwei/vim.html" class="sidebar-link">Vim</a></li><li><a href="/yunwei/supervisor.html" class="sidebar-link">SuperVisor</a></li><li><a href="/yunwei/gitbook.html" class="sidebar-link">GitBook</a></li><li><a href="/yunwei/gitlab.html" class="sidebar-link">GitLab</a></li><li><a href="/yunwei/jenkins.html" class="sidebar-link">Jenkins</a></li><li><a href="/yunwei/redis.html" class="sidebar-link">Redis</a></li><li><a href="/yunwei/prometheus.html" class="sidebar-link">Prometheus</a></li><li><a href="/yunwei/rabbitmq.html" class="sidebar-link">RabbitMq</a></li><li><a href="/yunwei/wiki.html" class="sidebar-link">Confluence Wiki</a></li><li><a href="/yunwei/wakuang.html" class="sidebar-link">脚本攻击处理</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="redis学习"><a href="#redis学习" class="header-anchor">#</a> Redis学习</h1> <h2 id="_1-底层数据结构"><a href="#_1-底层数据结构" class="header-anchor">#</a> 1.底层数据结构</h2> <p>redis底层使用c语言做了一些底层的数据结构用以支持redis的实现，帮助其支持其快速操作。其中包括以下这些数据结构</p> <h3 id="_1-1-sds"><a href="#_1-1-sds" class="header-anchor">#</a> 1.1 SDS</h3> <ul><li>数据结构定义<div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">struct</span> <span class="token class-name">sdshdr</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> len <span class="token comment">// buf中已使用字节长度</span>
+  <span class="token keyword">int</span> free <span class="token comment">// buf中未使用字节长度</span>
+  <span class="token keyword">char</span> buf<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 字节数组</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul> <p><img src="/assets/img/redis1.efd3796c.png" alt="redis">
+如图，保存了五个字节长的字符串，最后的\0遵循c语言以此结尾，不计入len
+<img src="/assets/img/redis2.0fa1d75d.png" alt="redis2">
+这个为free为5的sds</p> <ul><li>优势
+<ul><li>O(1)时间复杂度获取字符串长度</li> <li>记录了len和扩容机制能在strcat时杜绝缓冲区的溢出</li> <li>减少了修改字符串长度时内存重分配次数
+<ul><li>空间预分配 - 在拼接字符时小于1m扩大两倍，大于1m每次够用基础上扩充1m。</li> <li>惰性空间释放 - 截取时会将剩余空间先留在那，记录在free内，避免频繁分配内存。</li></ul></li> <li>二进制安全 - 记录了len解决了\0问题，可以保存音频、图片等文件二进制数据。</li></ul></li></ul> <h3 id="_1-2-链表"><a href="#_1-2-链表" class="header-anchor">#</a> 1.2 链表</h3> <ul><li>数据结构定义</li></ul> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">listNode</span> <span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> <span class="token class-name">listNode</span> <span class="token operator">*</span> prev<span class="token punctuation">;</span> <span class="token comment">// 前置节点</span>
+    <span class="token keyword">struct</span> <span class="token class-name">listNode</span> <span class="token operator">*</span> next<span class="token punctuation">;</span> <span class="token comment">// 后驱节点</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span> value<span class="token punctuation">;</span> <span class="token comment">// 节点的值</span>
+<span class="token punctuation">}</span>listNode<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">list</span> <span class="token punctuation">{</span>
+    <span class="token comment">//表头节点</span>
+    listNode <span class="token operator">*</span> head<span class="token punctuation">;</span>
+    <span class="token comment">//表尾节点</span>
+    listNode <span class="token operator">*</span> tail<span class="token punctuation">;</span>
+    <span class="token comment">//链表所包含的节点数量</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">long</span> len<span class="token punctuation">;</span>
+    <span class="token comment">//节点值复制函数</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">*</span>dup<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//节点值释放函数</span>
+    <span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>free<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//节点值对比函数</span>
+    <span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span>match<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>ptr<span class="token punctuation">,</span><span class="token keyword">void</span> <span class="token operator">*</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> list<span class="token punctuation">;</span>
+</code></pre></div><p>可以看到是一个标准的记录头尾节点和长度的双向链表实现</p> <ul><li>用处<br>
+应用广泛的数据结构，高效的节点重排能力和顺序性的节点访问方式<br>
+应用在<font color="red"><strong>当一个列表包含比较多的元素或元素都是较长字符串时</strong></font>，以及发布订阅、慢查询、监视器等功能。</li></ul> <h3 id="_1-3-字典"><a href="#_1-3-字典" class="header-anchor">#</a> 1.3 字典</h3> <ul><li>数据结构定义</li></ul> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">dict</span> <span class="token punctuation">{</span>
+    <span class="token comment">//类型特定函数</span>
+    dictType <span class="token operator">*</span>type<span class="token punctuation">;</span>
+    <span class="token comment">//私有数据</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span>privdata<span class="token punctuation">;</span>
+    <span class="token comment">//哈希表</span>
+    dictht ht<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// rehash索引</span>
+    <span class="token comment">//当rehash不在进行时，值为-1</span>
+    in trehashidx<span class="token punctuation">;</span> <span class="token comment">/* rehashing not in progress if rehashidx == -1 */</span>
+<span class="token punctuation">}</span> dict<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">dictht</span> <span class="token punctuation">{</span>
+    <span class="token comment">//哈希表数组</span>
+    dictEntry <span class="token operator">*</span><span class="token operator">*</span>table<span class="token punctuation">;</span>
+    <span class="token comment">//哈希表大小</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">long</span> size<span class="token punctuation">;</span>
+    <span class="token comment">//哈希表大小掩码，用于计算索引值</span>
+    <span class="token comment">//总是等于size-1</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">long</span> sizemask<span class="token punctuation">;</span>
+    <span class="token comment">//该哈希表已有节点的数量</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">long</span> used<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> dictht<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">dictEntry</span> <span class="token punctuation">{</span>
+    <span class="token comment">//键</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span>key<span class="token punctuation">;</span>
+    <span class="token comment">//值</span>
+    <span class="token keyword">union</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span> <span class="token operator">*</span>val<span class="token punctuation">;</span>
+        uint64_tu64<span class="token punctuation">;</span>
+        int64_ts64<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> v<span class="token punctuation">;</span>
+    <span class="token comment">//指向下个哈希表节点，形成链表</span>
+    <span class="token keyword">struct</span> <span class="token class-name">dictEntry</span> <span class="token operator">*</span>next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> dictEntry<span class="token punctuation">;</span>
+</code></pre></div><p>可以看出redis的hash实现和常见的有一点点不大一样，它有两个数组以及记录了rehashIndex等</p> <ul><li><p>用处
+也是常用的数据结构，使用hash对象时，<font color="red"><strong>如果一个哈希包含的键值过多或元素都是较长字符串时</strong>，</font>会采用hash表作为底层实现。</p></li> <li><p>机制</p> <ul><li>平常只用ht[0]的哈希表，ht[1]只在rehash时使用</li> <li>采用MurmurHash2算法计算键的哈希（即使输入的键是有规律的，也能很快给出很好的随机分布）,如图所示的hash,假如hash的值为8，还会经过如下步骤和sizemask做位与运算。
+<img src="/assets/img/redis3.41bcface.png" alt="redis3"><div class="language-c extra-class"><pre class="language-c"><code>index <span class="token operator">=</span> hash<span class="token operator">&amp;</span>dict<span class="token operator">-</span>＞ht<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sizemask <span class="token operator">=</span> <span class="token number">8</span> <span class="token operator">&amp;</span> <span class="token number">3</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>使用链地址头插法解决hash冲突</li> <li>rehash
+<ul><li>为ht[1]分配空间，h[0].used*2的第一个2的n次幂或者h[0].used的第一个2的n次幂（对应扩容和收缩）</li> <li>将h[0]上所有键值对重新hash迁移到ht[1]上</li> <li>释放ht[0]，将ht[1]变为ht[0]，并新创建ht[1]</li> <li>在没有bgsave或bgrewriteof时如果负载因子(ht[0].used/ht[0].size)大于等于1时或在bgsave等的时候负载因子大于等于5时会扩容。</li> <li>rehash是渐进式的，如果庞大的键值对同时迁移可能会卡死服务器，所以它维护了rehashIndex，默认-1，开始rehash时为0，在对字典操作时会顺带对ht[0]的数组rehashIndex上的链表做迁移。直到迁移完成。</li></ul></li></ul></li></ul> <h3 id="_1-4-跳表"><a href="#_1-4-跳表" class="header-anchor">#</a> 1.4 跳表</h3> <ul><li><p>数据结构定义<br>
+作为常用数据结构，是一种能快速查找的有序链表延伸，链表在查找时，需顺序遍历，而调表在有序链表的基础上维护若干层上层索引，这样查找时从上向下或向右能达到最差O(n)，平均O(logN)的时间复杂度。
+<img src="/assets/img/redis4.9c370afd.png" alt="redis4">
+这也是空间换时间的理念，如图，查找指定元素时，从顶层索引开始，依次和同层后一个节点比较，如果待找值大于后节点值，继续同层向后，如果待找值小于后节点值，则往下一层继续查找。</p> <p>redis的实现粗看和理论有些不同，换成下面这张图应该就容易理解一点，同时具体看后续代码说明。
+<img src="/assets/img/redis7.889d72e0.png" alt="redis7"></p></li></ul> <div class="language-c extra-class"><pre class="language-c"><code>  <span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">zskiplist</span> <span class="token punctuation">{</span>
+    <span class="token comment">//表头节点和表尾节点</span>
+    <span class="token keyword">struct</span> <span class="token class-name">zskiplistNode</span> <span class="token operator">*</span>header<span class="token punctuation">,</span> <span class="token operator">*</span>tail<span class="token punctuation">;</span>
+    <span class="token comment">//表中节点的数量</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">long</span> length<span class="token punctuation">;</span>
+    <span class="token comment">//表中层数最大的节点的层数</span>
+    <span class="token keyword">int</span> level<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> zskiplist<span class="token punctuation">;</span>
+  
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">zskiplistNode</span> <span class="token punctuation">{</span>
+    <span class="token comment">//层</span>
+    <span class="token keyword">struct</span> <span class="token class-name">zskiplistLevel</span> <span class="token punctuation">{</span>
+        <span class="token comment">//前进指针</span>
+        <span class="token keyword">struct</span> <span class="token class-name">zskiplistNode</span> <span class="token operator">*</span>forward<span class="token punctuation">;</span>
+        <span class="token comment">//跨度</span>
+        <span class="token keyword">unsigned</span> <span class="token keyword">int</span> span<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> level<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">//后退指针</span>
+    <span class="token keyword">struct</span> <span class="token class-name">zskiplistNode</span> <span class="token operator">*</span>backward<span class="token punctuation">;</span>
+    <span class="token comment">//分值</span>
+    <span class="token keyword">double</span> score<span class="token punctuation">;</span>
+    <span class="token comment">//成员对象</span>
+    robj <span class="token operator">*</span>obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> zskiplistNode<span class="token punctuation">;</span> 
+</code></pre></div><p><img src="/assets/img/redis5.bc98d90f.png" alt="redis5"> <img src="/assets/img/redis6.1a9604f8.png" alt="redis6"></p> <p>可以看到，首先是level数组，每个level包含下个节点指针和跨度span，如一个值feng 5.0的score，那它可能有三层索引，所以在L1,L2,L3三层上都会记录这个值。而若另一个值wen 9.0的score，可能中间隔着6、7、8三个score，但是6、7、8可能的层数为2，而9.0的层数为5，那此时feng 5.0这个node在L3层上的span跨度就为4，forward指向的就是9.0的L3。</p> <p>对于新增的节点，每次用随机算法根据幂次定律(或者叫抛硬币概率，连续为正的难度会幂次提升）生成随机的高度，即1/2的几率level=1，1/4几率level=2,1/8几率level=3,1/16几率level=4...依此下去，所以粗略可以看出到32层的几率是很小的，这也是redis定义了最高层数是32的原因，因为够用。
+具体算法如下</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">int</span> <span class="token function">zslRandomLevel</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> level <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token number">0xFFFF</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span>ZSKIPLIST_P <span class="token operator">*</span> <span class="token number">0xFFFF</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        level <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>level<span class="token operator">&lt;</span>ZSKIPLIST_MAXLEVEL<span class="token punctuation">)</span> <span class="token operator">?</span> level <span class="token operator">:</span> ZSKIPLIST_MAXLEVEL<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>查找指定值时就是按之前所说，从最高层依此向右向下一层查找，这样在链表元素很多时，32层的高度查找起来速度要比顺序遍历快很多。</p> <p>同时记录了表尾节点和后退指针，所以它也支持倒序遍历链表，同时如果分值相同，按值的从小到大正序排列。</p> <ul><li>用处<br>
+作为有序集合底层实现之一，<font color="red"><strong>如果有序集合元素较多或者包含元素是较长字符串时</strong></font>，redis会采用跳表作为底层实现。</li></ul> <h3 id="_1-5-整数数组"><a href="#_1-5-整数数组" class="header-anchor">#</a> 1.5 整数数组</h3> <ul><li>数据结构定义<br>
+这个结构比较特殊，也蛮有想法的。它是一个按从小到大排序的整数数组，content的元素根据存入元素动态encoding决定存16、32、64位的整数，并且有升级操作，所以是在保证类型不出错的前提下尽可能的节省内存空间。</li></ul> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">intset</span> <span class="token punctuation">{</span>
+    <span class="token comment">//编码方式</span>
+    <span class="token class-name">uint32_t</span> encoding<span class="token punctuation">;</span>
+    <span class="token comment">//集合包含的元素数量</span>
+    <span class="token class-name">uint32_t</span> length<span class="token punctuation">;</span>
+    <span class="token comment">//保存元素的数组</span>
+    <span class="token class-name">int8_t</span> contents<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> intset<span class="token punctuation">;</span>
+</code></pre></div><p>比如encoding是16位的整数，之前3个数是[1][3][5]，如此，占据了48位的空间，而后续假如来了个-199999999，那会将encoding改为32，同时每个元素占32位空间，并且后续不会降级。[-199999999][1][3][5]。如此</p> <ul><li><p>用处<br> <font color="red"><strong>当一个集合只包含整数值元素，并且这个集合的元素数量不多时，</strong></font>Redis就会使用整数集合作为集合键的底层实现。</p></li> <li><p>机制</p> <ul><li>升级规则<br>
+如上</li></ul></li></ul> <h3 id="_1-6-压缩列表"><a href="#_1-6-压缩列表" class="header-anchor">#</a> 1.6 压缩列表</h3> <ul><li>数据结构定义<br>
+压缩列表是Redis为了节约内存而开发的，是由一系列特殊编码的连续内存块组成的顺序型（sequential）数据结构。一个压缩列表可以包含任意多个节点（entry），每个节点可以保存一个字节数组或者一个整数值。<br>
+所以它实际上就是一个连续内存块，但是可以保存多个节点，因为是连续内存块所以不会造成内存碎片，同时根据encoding动态取容量和zlbytes等机制，所以它也是为了节省内存设计的数据结构。
+<img src="/assets/img/redis8.47b843ee.png" alt="redis8"> <img src="/assets/img/redis9.2dd20e3b.png" alt="redis9"></li></ul> <p>每个entry节点包含content、encoding、previous_entry_length属性。
+所以根据zlbytes和zltail的地址以及各个节点中的previous_entry_length可以遍历各个节点。</p> <ul><li><p>用处<br>
+压缩列表（ziplist）是列表键和哈希键的底层实现之一。<font color="red"><strong>当一个列表键只包含少量列表项，并且每个列表项要么就是小整数值，要么就是长度比较短的字符串，</strong></font>那么Redis就会使用压缩列表来做列表键的底层实现。</p></li> <li><p>问题</p> <ul><li>连锁更新
+ziplist是连续内存块，且每个entry节点内部有content,encoding,previous_entry_length属性。而previous_entry_length属性可以是1或5个字节，假如上一个节点字节长度大于254，则下个节点的previous_entry_length会变成5个字节，从0xFE开头，如0xFE00002766。后面四个字节用于记录前一个entry的长度，0xFE用作标识。这样带来的问题，一种情况是假如有连续250-253字节的entry节点，向其头部插入一个大于254字节的新节点，这样原来的头节点就得将previous_entry_length变为5字节，而因此自身字节长度也会超过254字节。导致下一个节点也会按此操作，这带来的就是后续的节点都会连续更新。</li></ul></li></ul> <h3 id="_1-7-扩展"><a href="#_1-7-扩展" class="header-anchor">#</a> 1.7 扩展</h3> <ul><li>redis发展这么些年，当然内部和书本上变化还是蛮大的，比如使用object encoding去查看的话，会发现现在有quickList,listpack等等。放弃了双向链表和压缩列表转而采用listpack和快速列表。具体也可以在conf里配置阈值，如图所示，我在7版本的redis中配置了</li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code>list<span class="token punctuation">-</span>max<span class="token punctuation">-</span>ziplist<span class="token punctuation">-</span>size 127
+</code></pre></div><p>效果如下
+<img src="/assets/img/redis10.42c7318a.png" alt="redis10"></p> <h2 id="_2-应用层数据对象"><a href="#_2-应用层数据对象" class="header-anchor">#</a> 2.应用层数据对象</h2> <p>redis并不是直接使用上述数据结构，而是构建了个redisObject对象，因为redis是按键值对来使用的，所以每次新建redis对象的时候都是创建两个对象，分别是键和值，键都是字符串，而值则是redisObject,redisObject有三个属性，分别是type,ptr指针,以及encoding。<br>
+type为string,list,hash,set,zset，而encoding则分为具体的int,embstr,raw,quicklist,listpack,hashtable,intset,skiplist等等。ptr则是具体指针。对应关系如下，当然，新版本已经将ziplist和双端链表换成了listpack和quicklist。
+<img src="/assets/img/redis11.61dd839d.png" alt="redis11"> <img src="/assets/img/redis12.415a2149.png" alt="redis12"></p> <h3 id="_2-1-字符串"><a href="#_2-1-字符串" class="header-anchor">#</a> 2.1 字符串</h3> <ul><li><p>底层数据结构</p> <ul><li>int</li> <li>embstr</li> <li>raw<br>
+字符串的redisObject的encoding会使用上诉三种类型，当long型整数值时，会使用int，而进行append之类操作或float等计算时，会转为raw，当是小于44字节的字符串时，会使用embstr，而进行操作时，会转为raw，大于44字节的字符串时会是raw。区别在于内存分配次数embstr为一次，而raw需要两次，分别分配redisObject和sds的内存。同时embstr没有计算函数，所以每次计算就会转为raw。
+<img src="/assets/img/redis13.2a8e12df.png" alt="redis13"></li></ul></li> <li><p>常用命令  <a href="https://redis.io/commands/?group=string&amp;utm_source=redisinsight&amp;utm_medium=main&amp;utm_campaign=tutorials" target="_blank" rel="noopener noreferrer">详细见这<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>set</li> <li>get</li> <li>strlen</li> <li>append</li> <li>incr</li> <li>decr</li> <li>setex</li> <li>setnx</li> <li>getrange</li> <li>setrange</li> <li>...</li></ul></li></ul> <h3 id="_2-2-列表"><a href="#_2-2-列表" class="header-anchor">#</a> 2.2 列表</h3> <p>在老的版本中，采用了ziplist和linkedlist两种数据结构作为底层实现，但是新版本中已经被替换成了listpack和quicklist。
+老的版本ziplist因为上诉所说的连锁更新问题，所以新版本的listpack中将previous_entry_length改为了当前节点的length，同时去除了zltail。这样根据地址同样能遍历并获取到各个节点。同时也没有了连锁更新问题。<br>
+而quickList也是一个有首位项的双向链表，但是链表中的元素不再是具体的字节数组或整数而改成了ziplist，后续则变成了listpack。
+<img src="/assets/img/redis14.ef61c611.png" alt="redis14"></p> <ul><li><p>底层数据结构</p> <ul><li>zipList</li> <li>linkedList</li> <li>listpack</li> <li>quickList</li></ul></li> <li><p>常用命令</p> <ul><li>lpush rpush</li> <li>lrem</li> <li>lpop rpop</li> <li>linsert</li> <li>lrange</li> <li>llen</li> <li>...</li></ul></li> <li><p>配置</p> <ul><li>list-max-ziplist-size
+代表listpack内部大小或entry数量，正数代表数量，-1～-5代表4、8、16、32、64kb，推荐-2即8kb转换为quicklist。
+如配置了-1，用以下脚本插入值。<div class="language-shell extra-class"><pre class="language-shell"><code>    <span class="token comment"># conf地址根据brew安装包下homebrew.mxcl.redis.plist cat查看</span>
+    <span class="token function">vim</span> /usr/local/etc/redis.conf
+    <span class="token comment"># 修改为-1 即4kb</span>
+    list-max-ziplist-size <span class="token parameter variable">-1</span>
+</code></pre></div></li></ul></li></ul> <h3 id="_2-3-哈希表"><a href="#_2-3-哈希表" class="header-anchor">#</a> 2.3 哈希表</h3> <ul><li>底层数据结构
+<ul><li>ziplist</li> <li>hashtable</li> <li>listpack</li></ul></li> <li>常用命令
+<ul><li>hset</li> <li>hdel</li> <li>hsetnx</li> <li>hkeys</li> <li>hvals</li> <li>hgetall</li> <li>hget</li> <li>hlen</li> <li>...</li></ul></li> <li>配置
+<ul><li>hash-max-ziplist-value</li> <li>hash-max-ziplist-entries<br>
+很明了的encoding转换规则，当entries大于512个或值内单个元素字节大于64时，由listpack编码转为hashtable编码。</li></ul></li></ul> <h3 id="_2-4-集合"><a href="#_2-4-集合" class="header-anchor">#</a> 2.4 集合</h3> <ul><li>底层数据结构
+<ul><li>intset</li> <li>hashtable</li> <li>listpack</li></ul></li> <li>常用命令
+<ul><li>sadd</li> <li>spop key 返回随机元素</li> <li>srem key member1... 移除一个或多个值</li> <li>smembers key 返回所有成员</li> <li>srandmember key [count] 返回一个或多个成员，不删除</li> <li>scard key 返回集合len</li> <li>sinter key1 key2 返回给定集合的交集</li> <li>sinterstore dest key1 key2 交集并保存</li> <li>sdiff key1 key2 差集</li> <li>sdiffstore dest key1 key2 返回给定集合的差集并保存到destination中</li> <li>sunion key1 key2 并集</li> <li>sunionstore dest key1 key2 并集并保存</li></ul></li> <li>配置
+<ul><li>set-max-intset-entries</li></ul></li></ul> <h3 id="_2-5-有序集合"><a href="#_2-5-有序集合" class="header-anchor">#</a> 2.5 有序集合</h3> <ul><li>底层数据结构
+<ul><li>ziplist</li> <li>listpack</li> <li>skiplist
+<img src="/assets/img/redis15.d46da5a6.png" alt="redis15">
+跳表有些特殊，除了listpack外，如果采取skiplist编码，还采用了hashtable用来保存键值对，以优化根据成员查找分值这一操作的时间复杂度由O(logN)变为O(1)。即zset底层定义是这样。
+<img src="/assets/img/redis16.448e679a.png" alt="redis16"></li></ul> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">zset</span> <span class="token punctuation">{</span>
+  zskiplist <span class="token operator">*</span>zsl<span class="token punctuation">;</span>
+  dict <span class="token operator">*</span>dict<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> zset<span class="token punctuation">;</span>
+</code></pre></div></li> <li>常用命令
+<ul><li>zadd key score1 member1 ...</li> <li></li></ul></li> <li>配置
+<ul><li>zset-max-ziplist-entries</li> <li>zset-max-ziplist-value</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/backend/fdfs.html" class="prev">
+        FDFS使用
+      </a></span> <span class="next"><a href="/backend/hadoop.html">
+        Hadoop
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1211b944.js" defer></script><script src="/assets/js/2.d9cdd38b.js" defer></script><script src="/assets/js/3.7bd32064.js" defer></script>
+  </body>
+</html>
